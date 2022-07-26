@@ -1,11 +1,11 @@
-label estr_TFOTprolog:
+label tft_prolog:
 
-    $ new_chapter(0, u"Страх, Любовь и Слёзы. Пролог")
+    $ new_chapter(0, u"Судьбы Двух. Пролог")
     $ persistent.timeofday = "night"
     $ prolog_time()
 
     window hide
-    play sound diapazon fadein 3
+    play sound porn_diapazon fadein 3
     scene int_prolog_nightclub with dissolve2
     pause (11.5)
     play sound claps fadein 1
@@ -141,4 +141,4 @@ label estr_TFOTprolog:
     stop ambience fadeout 7
     stop sound_loop fadeout 7
     pause (6)
-    jump estr_TFOT1
+    jump tft_1

@@ -7,7 +7,7 @@ init -99 python:
 
 init:
     define config.developer = True
-    $ mods["estr_TFOTprolog"]=u"Cудьбы Двух"
+    $ mods["tft_menu_main"]=u"Cудьбы Двух"
 
     $ day1_vzlom = False
     $ day0_drunk =  False
@@ -72,7 +72,7 @@ init:
 
     $ deepcosmo = "mods/TFT/image/sound/music/deepcosmo.mp3"
 
-    $ diapazon = "mods/TFT/image/sound/music/diapazon.mp3"
+    $ porn_diapazon = "mods/TFT/image/sound/music/diapazon.mp3"
 
     $ stressedoutminus = "mods/TFT/image/sound/music/stressedoutminus.mp3"
 
@@ -524,3 +524,24 @@ init:
     
     # days
     image day3 = getSprite("mods/TFT/image/sprites/misc/day3.png")
+
+    screen tft_menu:
+        vbox xalign 0.10 yalign 0.5 spacing 100:
+            imagebutton:
+                auto "mods/TFT/image/menu/start_2_%s.png"
+                action Jump ("tft_prolog")
+            imagebutton:
+                auto "mods/TFT/image/menu/tracklist_%s.png"
+                action Jump ("tft_menu_tracklist")
+            imagebutton:
+                auto "mods/TFT/image/menu/exit_2_%s.png"
+                action Jump ("tft_menu_exit")
+
+label tft_menu_main:
+    call screen tft_menu
+
+label tft_menu_tracklist:
+    "Здесь будет вся музыка из мода"
+
+label tft_menu_exit:
+    return
