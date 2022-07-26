@@ -1,0 +1,1829 @@
+label estr_TFOT1:
+
+    $ backdrop = "days"
+    $ new_chapter(1, u"Судьбы двух. День 1")
+    $ persistent.sprite_time = "day"
+    scene black with dissolve2
+    $ day_time()
+    scene bg black
+    play ambience ambience_int_cabin_day fadein 2
+    play music BLAD fadein 2
+    $ renpy.pause(2)
+    $ persistent.sprite_time = "day"
+    window show
+    scene black
+    
+    "Когда я проснулся, всей этой бессознанки и след простыл."
+    
+    window hide
+    scene bg int_bus with dissolve2
+    window show
+    
+    th "{i}Уже приехали?"
+    "Пробормотал я подымаясь."
+    
+    window hide
+    scene int_bus with dissolve2
+    window hide
+    
+    "Когда ко мне пришла сознательность, я заметил, что что-то внутри автобуса поменялось."
+    "Точнее сказать не что-то, а весь салон под чистую."
+    "В непонимании я вышел на улицу."
+    
+    window hide
+    scene bg ext_camp_entrance_day with dissolve2
+    play ambience ambience_ext_road_day fadein 2
+    window show
+    
+    "Вокруг всё было зелёное, красочное. Было слышно пение птиц, шуршание листвы под действием ветра. В общем, было лето."
+    th "{i}Но как? {w} Я ведь только по снегу шастал."
+    "На глаза мне попалась надпись над воротами."
+    th "{i}Со-вё-нок. {w} Пионер лагерь..."
+    
+    play sound sfx_cellular_phone_error
+    
+    "Я достал телефон дабы посмотреть свою геолокацию."
+    th "{i}Нет сети..."
+    "Затем попытался набрать 112 - тоже безуспешно."
+    
+    window hide
+    scene bg ext_bus with dissolve2
+    scene bg ext_bus with vpunch
+    window show
+    
+    "За моей спиной всё это время стоял старый икарус красного цвета, а не тот автобус, на котором я приехал."
+    "На лобовом стекле были цифры 410."
+    th "{i}Ума не приложу..."
+    
+    play sound sfx_metal_door_handle_rattle
+    
+    "Я бы ещё долго размышлял, если бы не услышал сзади какой-то шум."
+    
+    window hide
+    scene slexit with dissolve2
+    window show
+    
+    "Когда я обернулся, то увидел девушку, выглядываюшую из-за ворот."
+    "Она шагнула ко мне."
+    
+    window hide
+    scene bg ext_camp_entrance_day with dissolve2
+    show sl normal pioneer far with dissolve
+    show sl normal pioneer with dissolve
+    window show
+    
+    "У неё были две очень длинные светлые косы, голубые глаза и... {w}{i}пионерская форма."
+    th "{i}Это что, какая-то реставрация событий или фестиваль? Иначе как всё это воспринимать."
+    slp "Привет!"
+    "Поприветствовала меня девочка."
+    dns "Привет..."
+    slp "Ты новенький?"
+    dns "Да, в этих краях первый раз..."
+    
+    show sl smile pioneer with dissolve
+    
+    slp "Меня Славя зовут."
+    "Я уже открыл рот, но она продолжила."
+    sl "Вообще-то полное имя Славяна, но все меня Славей зовут. И ты зови."
+    dns "А я Денис. Очень приятно."
+    dns "Слушай, а где мы?"
+    "Решил узнать у неё я."
+    
+    show sl laugh pioneer with dissolve
+    
+    sl "Как где? В пионер лагере «Совёнок», добро пожаловать."
+    "Спасибо, и без тебя уже понял."
+    
+    show sl smile pioneer with dissolve
+    
+    sl "Тебе к вожатой надо, она всё расскажет!"
+    sl "Смотри.{w} Сейчас идёшь прямо-прямо, доходишь до площади, затем налево, дальше будут домики."
+    dns "Окей..."
+    sl "Что...?"
+    dns "Что?"
+    sl "Ну что ты сейчас сказал?"
+    dns "Окей..."
+    "С небольшим испугом ответил я."
+    sl "А что это значит?"
+    dns "Ну слово такое... {w}Типо «Хорошо»‎."
+    sl "Никогда такого раньше не слышала, наверное что-то зарубежное."
+    dns "Ну да, зарубежное."
+    sl "Поняла. Ну ладно, я пошла, мне ещё с младшим отрядом возиться. {w}А ты иди к вожатой."
+    dns "Удачи..."
+    
+    window hide
+    show sl normal pioneer far with dissolve
+    play sound sfx_metal_door_handle_rattle
+    hide sl normal pioneer with dissolve
+    window show
+    
+    "Девушка скрылась за воротами, а я остался стоять как вкопанный."
+    "В голове было лишь одно:"
+    th "{i}Куда же я попал?"
+    th "{i}И что вообще там, за воротами?"
+    
+    play sound sfx_open_metal_door
+    
+    "Я глянул в проём."
+    
+    window hide
+    scene vorota with dissolve2
+    window show
+    
+    "Какое-то длинное здание, ровная асфальтированная дорога."
+    th "{i}Да вроде ничего особенного."
+    "Я снова обернулся."
+    
+    window hide
+    scene bg ext_no_bus with dissolve2 
+    with vpunch
+    window show
+    
+    "Автобус, только что стоявший за моей спиной, необъяснимым для меня образом {i}исчез."
+    th "{i}Это как...?"
+    th "{i}Он же не мог бесшумно завестись и уехать?"
+    th "{i}Да и как бы он уехал без водителя?"
+    "С непониманием того, что будет дальше, я пошёл в лагерь."
+    
+    window hide
+    scene bg ext_camp_entrance_day with dissolve2
+    pause (1)
+    play sound sfx_open_metal_door
+    scene vorota with dissolve2
+    window show
+    
+    th "{i}Ну его нахрен, всяко лучше чем стоять на стоянке с магическим автобусом, который за секунду может исчезнуть."
+    "Оказавшись за воротами, я попытался вспомнить путь до вожатой, который мне рассказывала Славяна."
+    th "{i}Прямо до площади, а потом... {w} потом..."
+    th "{i}Короче сначала до площади."
+    "Заключил я и зашагал вперёд."
+    
+    window hide
+    scene bg ext_clubs_day with dissolve2
+    window show
+    
+    "Я проходил мимо здания с закрытыми окнами, надписями на стене и каким-то ведром на крыльце."
+    "Моё внимание привлекла надпись на импровизированной доске объявлений."
+    "{b}Клубы."
+    th "{i}Типо детский кружок какой-то?"
+    "Прочитав до конца, я выяснил, что это {b}«Кружок по интересам»."
+    "Cудя по звукам, доносящимся изнутри, это скорее была какая-то мастерская."
+    "Моё желание докопаться до истины победило, и я подошёл к двери."
+    
+    play sound sfx_knock_door7_polite
+    
+    "Постучав, отошёл от неё на шаг."
+    "Но ничего не произошло."
+    
+    play sound sfx_knock_door2
+    
+    "Я постучал ещё раз."
+    pause (1.5)
+    "Ответа снова не последовало."
+    "Тогда я сам открыл дверь."
+    
+    window hide
+    stop music
+    play sound sfx_open_cabinet_2
+    scene bg int_clubs_male_day with dissolve2
+    play ambience ambience_clubs_inside_day fadein 3
+    window show
+    
+    "Это и правда оказалась мастерская."
+    "В моей школе тоже был кружок робототехники, но я на него не ходил."
+    "Мне это казалось неинтересным и скучным."
+    "Внутри помещения ко мне спиной стояло два парня, склонившихся над столом."
+    dns "Здравствуйте!"
+    "Громко сказал я."
+    "Пионеры обернулись."
+    
+    window hide
+    show el normal pioneer at  left with dissolve
+    show sh normal pioneer at right with dissolve
+    pause (1)
+    show el smile pioneer at left with dissolve
+    window show
+    
+    elp "Новые лица в лагере?"
+    dns "Да, только приехал."
+    elp "Я - Электроник, а это - Шурик."
+    "Он протянул мне руку. {w}Я пожал её."
+    dns "А я Денис."
+    
+    show sh smile pioneer at right with dissolve
+    
+    sh "Добро пожаловать в кружок кибернетики. {w}Не хочешь кстати записаться?"
+    dns "Не, парни, техника - не моё."
+    
+    show sh normal at right with dissolve
+    show el normal at left with dissolve
+    
+    sh "Ну ладно..."
+    "Грустно протянул он."
+    dns "Кстати, не подскажите к кому мне подойти если я только приехал? {w}Типо у кого можно всё узнать."
+    el "А, ну так это тебе к Ольге Дмитриевне надо, она здесь вожатая."
+    dns "А где её найти?"
+    el "Давай я тебя провожу."
+    dns "Если тебе не сложно."
+    el "Да я тут канифолью надышался, всё равно хотел выйти проветриться."
+    dns "Ну и отлично."
+    
+    window hide
+    play sound sfx_open_cabinet_2
+    stop ambience fadeout 3
+    play ambience ambience_day_countryside_ambience fadein 3
+    play music music_list["my_daily_life"] fadein 3
+    scene bg ext_clubs_day with dissolve2
+    window show
+    
+    "Мы вдвоём вышли из здания ''Клубов''."
+    
+    show el normal pioneer with dissolve
+    
+    el "Пойдем за мной."
+    dns "Пойдем."
+    
+    window hide
+    scene vorota with dissolve2
+    pause (1)
+    scene bg ext_square_day with dissolve2
+    window show
+    
+    "По пути я успел удивиться местным красотам."
+    "Хотя возможно это было из-за того, что я уже отвык от лета."
+    "Ведь в «{i}Моём мире» была зима, а тут вдруг лето."
+    "Посередине площади стоял памятник."
+    th "{i}Генда."
+    th "{i}Таких не помню. Наверное просто какой-то основатель лагеря."
+    "Спрашивать у местных кто это такой я не стал."
+    
+    window hide
+    scene sov1 with dissolve2
+    window show
+    
+    "Мимо проплывали маленькие домики, похожие больше на отрезанные крыши или большие бочки."
+    
+    window hide
+    scene bg ext_house_of_mt_day with dissolve2
+    window show
+    
+    "Наконец мы остановились у одного из них."
+    
+    show el normal pioneer with dissolve
+    
+    el "Пришли!"
+    dns "Она здесь живёт?"
+    el "Да, заходи, только постучаться не забудь. {w}А я пойду пройдусь ещё."
+    dns "Давай, спасибо за помощь."
+    
+    hide el normal pioneer with dissolve
+    
+    "Электроник ушёл, а я подошёл к двери и постучал."
+    
+    play sound sfx_knock_door2
+    pause (1.5)
+    
+    mt "Открыто!"
+    "Послышалось изнутри."
+    
+    window hide
+    play sound sfx_open_cabinet_1
+    scene bg int_house_of_mt_day with dissolve2
+    stop music fadeout 3
+    play ambience ambience_int_cabin_day fadein 3
+    window show
+    
+    "Я зашёл в домик."
+    "Внутри он казался довольно просторным, хотя снаружи выглядел маленьким."
+    "Две кровати у противоположных стен, столик, шкаф. {w}В общем всё что нужно для комфортного проживания."
+    
+    show mt normal panama pioneer with dissolve
+    
+    "Передомной стояла вожатая. {w}Девушка лет двадцати пяти, сo средней длинны волосами, прикрытыми панамкой."
+    th "{i}Круто наверное быть вожатым. {w}Сидишь себе на свежем воздухе, иногда выдаёшь нагоняй непослушным детям."
+    th "{i}Есть где жить, еда тоже не проблема."
+    
+    show mt angry panama pioneer with dissolve
+    
+    th "{i}Не жизнь, а сказка наверное."
+    th "{i}Ой, надо же поздроваться!"
+    dns "Здравствуйте, Ольга Дмитриевна!"
+    
+    show mt normal panama pioneer with dissolve
+    
+    mt "Здравствуй. {w}Денис, да?"
+    dns "Да."
+    mt "Я вожатая отряда номер один, ты в него записан, так что ближайшее время ты находишься под моей ответственностью"
+    dns "Понял."
+    mt "Ты же не с пустыми руками сюда приехал, вещи у тебя с собой есть?"
+    dns "Да, конечно."
+    "Я продемонстрировал ей свою сумку."
+    mt "Что ты с собой взял?"
+    
+    play sound sfx_unzip_sleepbag
+    
+    "Я расстегнул молнию и заглянул внутрь."
+    dns "Одну кофту, одну футболку, бутылк... э... рубашку. {w}Ну и нижнее бельё."
+    mt "Отлично, правда ходить тебе в этом не придется."
+    dns "Это как?"
+    mt "А ты не видел как остальные одеты? {w}Все обязаны носить пионерскую форму, это устав лагеря!"
+    th "{i}Вот попал..."
+    "Я никогда не любил обязательную форму, какой бы она не была."
+    "В школьные годы всё время получал выговоры от директора, за то что в очередной раз пришел в яркой футболке или спортивных штанах."
+    dns "Хорошо, где можно её взять?"
+    mt "На бельевом складе. {w}Сейчас я тебя посвящу в местный распорядок дня, и сходишь за ней."
+    dns "Ладно."
+    mt "Так вот, жить будешь в двадцать седьмом домике."
+    dns "Это где?"
+    mt "Знаешь где кружок кибернетики?"
+    dns "Да, я туда заходил."
+    mt "Молодец. Если идти от главных ворот, то на первом повороте поворачиваешь направо, там находишь домик « бочку». Это твой."
+    dns "Хорошо, найду."
+    mt "Так как ты опоздал на неделю, всех по парам расселили уже. Так что пока будешь один. Это конечно не у меня же тебе спать."
+    dns "Согласен, я бы предпочёл жить один."
+    
+    show mt grin panama pioneer with dissolve
+    
+    mt "Не надейся, скоро ещё пионеры приедут, и найдем тебе соседа."
+    dns "Ну ладно."
+    
+    show mt smile panama pioneer with dissolve
+    
+    "Грустно протянул я."
+    
+    play sound sfx_keys_rattle
+    
+    mt "Вот тебе ключи, не потеряй."
+    "Она протянула мне два одинаковых ключа на колечке."
+    "Я убрал их в карман."
+    dns "А кормить будут?"
+    
+    show mt laugh panama pioneer with dissolve
+    
+    mt "В очередной раз убеждаюсь в том, что путь к сердцу мужчины лежит через его желудок."
+    dns "Ха-ха, возможно."
+    
+    show mt smile panama pioneer with dissolve
+    
+    mt "Да, будут. {w}Затрак в девять после линейки, обед в три, а ужин в шесть. {w}Отбой в десять."
+    dns "У меня часов нет."
+    mt "Ты поймешь когда надо будет идти в столовую."
+    "Загадочно сказала она."
+    dns "А что за линейка?"
+    mt "Каждый день в восемь утра все пионеры собираются на площади, делают зарядку, слушают задания."
+    dns "Задания?"
+    mt "Да, а то знаю я вас, бездельников."
+    mt "Ну вроде всё рассказала. {w}Сейчас иди на склад, возьми форму, а потом в домик."
+    dns "А где склад и чем мне заниматься после этого?"
+    mt "Ты пока свободен, первый день как никак, а склад находится за столовой."
+    dns "А она где?"
+    mt "А она по левую руку Генды. {w}Где площадь я надеюсь ты знаешь?"
+    dns "Да, знаю."
+    mt "Всё, иди."
+    dns "До свидания." 
+    
+    window hide
+    play sound sfx_open_cabinet_2
+    scene bg ext_house_of_mt_day with dissolve2
+    play ambience ambience_day_countryside_ambience fadein 3
+    window show
+    
+    th "{i}Неполохое начало. Интересно что будет дальше."
+    
+    window hide
+    scene bg ext_square_day with dissolve2
+    window show
+    
+    "На площади стояла бурно обсуждающая что-то компания пионеров."
+    "Я же пошёл в направлении бельевого склада."
+    
+    window hide
+    scene bg ext_dining_hall_away_day with dissolve2
+    pause (1.5)
+    scene ext_storage_day with dissolve2
+    window show
+    
+    "Передомной вырос небольшой амбар."
+    "Рядом в воздухе веял дым, разносимый ветром из-за угла здания. {w}Я глянул туда."
+    
+    window hide
+    scene ext_storage_day2 with dissolve2
+    pause (0.5)
+    show dv guilty pioneer2 flt with dissolve
+    window show
+    
+    "Там стояла какая-то девушка."
+    "В нос сразу ударил запах сигарет."
+    
+    hide dv guilty pioneer2 flt
+    play sound oi
+    show dv surprise pioneer2 flt with dissolve
+    
+    "Увидев меня, она сразу спрятала руку за спину."
+    dns "Эм... Привет."
+    th "{i}Кажется я напугал её."
+    dns "Ты что тут делаешь?"
+    
+    hide dv surprise pioneer2 flt with dspr
+    show dv angry pioneer2 flt with dissolve
+    
+    dvp "А тебе какое дело?"
+    dns "Просто интересно."
+    "Она попыталась что-то сказать, но видимо передумала."
+    
+    hide dv angry pioneer2 flt with dspr
+    show dv sad2 pioneer2 flt with dissolve
+
+    "Затем виновато посмотрела на меня."
+    dns "Да не боись, не сдам я вожатой что ты тут курила."
+
+    hide dv sad2 pioneer2 flt with dspr
+    show dv shy pioneer2 flt with dissolve
+    pause (0.7)
+
+    dvp "Ничего я не..."
+    dns "Всё нормально."
+    "Поспешил успокоить её я."
+
+    hide dv shy pioneer2 flt with dspr
+    show dv angry pioneer2 flt with dissolve
+
+    dvp "Только не надо сейчас мне говорить что я девушка, и не должна курить."
+    "Злобно проговорила она."
+    dns "Я и не собираюсь."
+
+    hide dv angry pioneer2 flt with dspr
+    show dv sad2 pioneer2 flt with dissolve
+    
+    dvp "Ну ладно..."
+    dns "А звать то тебя хоть как, красавица?"
+    "У меня никогда не было проблем с тем чтобы сделать кому-то комплимент."
+    "Особенно если есть за что.  А у неё было за что."
+    "Девушка и правда была довольно симпатичной. {w}Большие красивые глаза цвета янтаря. Ни разу таких раньше не видел. Блестящие рыжие волосы, заплетённые в два хвостика и подчёркивающие цвет глаз, аккуратное милое личико."
+    "Рубашку она завязала в узел, подчеркивая грудь и оголив плоский загорелый животик."
+    "Этим она как бы говорила, что фигурой природа её тоже не обделила."
+
+    hide dv sad2 pioneer2 flt
+    show dv smile pioneer2 flt with dissolve
+
+    dvp "Алиса."
+    "С улыбкой произнесла она."
+
+    hide dv smile pioneer2 flt
+    show dv grin pioneer2 flt with dissolve
+
+    dv "А тебя?"
+    dns "А меня Денис."
+    "Я протянул ей руку, дабы закрепить знакомство."
+    "Она протянула свою."
+    th "{i}Жмёт она на удивление сильно."
+    dv "А ты новенький?"
+    dns "Да, вот только от вожатой иду. {w}За формой на склад отправила."
+    dv "C приездом чтоли!"
+    dns "Спасибо."
+    dv "Только склад закрыт."
+    "Почему-то с ухмылкой произнесла она."
+    dns "А у кого ключи есть?"
+    dv "У меня."
+    dns "Ну так можешь его открыть для меня? {w}Или дай ключи, я сам открою."
+    "Она протянула мне связку ключей со словами:"
+    dv "Будешь должен!"
+    dns "Ладно..."
+    "Её логики мне было не понять."
+
+    window hide
+    hide dv grin pioneer2 flt with dissolve
+    play sound sfx_keys_rattle
+    pause (1.5)
+    play sound saray
+    pause (0.7)
+    play ambience ambience_int_cabin_day fadein 3
+    scene int_warehouse_day with dissolve2
+    window show
+
+    "Я открыл дверь и зашёл внутрь."
+    "Алиса зашла следом."
+    
+    scene int_warehouse_day2 with dissolve
+    
+    "Внутри оказалось много стеллажей с одеждой."
+    "Посреди комнаты стояла гладильная доска, а в углу швейная машинка."
+    th "{i}Довольно цивильно."
+
+    show dv smile pioneer2 with dissolve
+
+    dv "Ты размер то свой знаешь?"
+    th "{i}Благодаря консультантке из магазина одежды - знаю."
+    dns "Да, конечно."
+    dns "А что мне конкретно нужно?"
+
+    hide dv smile pioneer2 with dissolve
+    show dv surprise pioneer2 with dissolve
+
+    dv "Рубашка, шорты... {w}ремень и галстук наверное..."
+    dns "Спасибо."
+
+    hide dv surprise pioneer2 with dissolve
+    show dv normal pioneer2 with dissolve
+
+    play sound storagenoise
+    pause (3)
+
+    "Искать долго не пришлось."
+    dns "Вроде всё."
+    dv "Угу."
+
+    window hide
+    play sound saray
+    scene ext_storage_day with dissolve2
+    play ambience ambience_day_countryside_ambience fadein 3
+    play sound sfx_keys_rattle
+    window show
+
+    "Я вернул Алисе ключи."
+
+    show dv smile pioneer2 with dissolve
+
+    dv "Ладно, я пошла."
+
+    show dv angry pioneer2 with dissolve
+
+    dv "Смотри не проболтайся! {w}Иначе пеняй на себя."
+    "Она изобразила грозный взгляд."
+    "Но меня это лишь позабавило."
+    dns "Не беспокойся, не проболтаюсь."
+
+    show dv normal pioneer2 with dissolve
+
+    dv "Ещё увидимся."
+    dns "Удачи."
+
+    window hide
+    pause (1.3)
+    hide dv normal pioneer2 with dissolve
+    window show
+    
+    "Она скрылась за кустами."
+    "Я проводил её взглядом и пошёл на площадь."
+    
+    window hide
+    scene bg ext_dining_hall_away_day with dissolve2
+    window show
+    
+    th "Девушка «Не влезай - убьёт» , девушка «Пожар»."
+    "Наверное в лагере она пользуется авторитетом."
+    "Незнаю как все, но я человека буду уважать только за дело."
+    
+    window hide
+    scene bg ext_square_day with dissolve2
+    pause (2)
+    scene bg ext_houses_day with dissolve2
+    window show
+    
+    "Я шёл мимо каких-то домиков и никак не мог найти нужный."
+    th "{i}Как они вообще понимают какой номер у конкретного дома?"
+    
+    window hide
+    pause (1)
+    scene domext with dissolve2
+    window show
+    
+    "Спросив у какого-то мимо проходящего пионера дорогу, я наконец нашёл свой."
+    
+    play sound sfx_open_cabinet_1
+    
+    "Открыл дверь и шагнул через порог."
+    
+    window hide
+    play ambience ambience_int_cabin_day fadein 3
+    scene dom with dissolve2
+    window show
+    
+    "Внутри было две кровати, шкаф и столик."
+    "Я бросил сумку на пол у одной из кроватей."
+    th "{i}Надо бы переодеться."
+    "Скинув с себя одежду, я быстро оделся в пионерскую форму."
+    "Даже галстук смог завязать похожим образом, как было у Электроника."
+    "В голове вдруг промелькнуло:"
+    th "{i}А зачем я этим занимаюсь? Я ведь даже не знаю где и зачем нахожусь. Может это вообще сон..."
+    "Я сильно ущипнул себя за руку."
+    th "{i}Нет, определённо не сон."
+    th "{i}Ладно, как говорил один мой знакомый: «Если тебя уже насилуют, то тебе остается только стонать.»."
+    "Мне вдруг захотелось глянуть на себя в зеркало. Предположив, что оно в шкафу, я открыл дверцу."
+    
+    window hide
+    play sound sfx_open_cupboard
+    scene mirror with dissolve
+    with vpunch
+    window show
+    
+    "Зеркало висело на дверце, только вот в нём отражался не я. Тоесть я, но иной."
+    "Пропали мешки под глазами, обветренные сухие губы превратились в нормальные."
+    "Я впринципе будто стал немного моложе."
+    th "{i}Видимо изменения коснулись не только окружающей среды, но и меня самого."
+    
+    window hide
+    scene dom with dissolve
+    window show
+    
+    "Оторвавшись от зеркала, я начал разбирать свою сумку."
+    th "{i}Смысла перекладывать вещи в шкаф нет, вдруг автобус приедет и я смогу выбраться отсюда так же как и попал."
+    th "{i}Только вот бутылку надо на дно положить. {w}Не знаю зачем... {w}На всякий случай."
+    
+    play sound jimbeam
+    
+    "Я переложил бутылку в самый низ и прикрыл её одеждой."
+    th "{i}Отлично, чем бы теперь заняться?"
+    
+    window hide
+    play sound sfx_open_cabinet_1
+    scene domext with dissolve2
+    play ambience ambience_day_countryside_ambience
+    pause (1.5)
+    play sound sfx_dinner_jingle_normal
+    window show
+    
+    "Вдруг по лагерю пронесся звук горна."
+    th "{i}Это похоже то, о чём говорила вожатая. Прикольная задумка - делать звуковой сигнал к обеду."
+    
+    window hide
+    scene bg ext_square_day with dissolve2
+    window show
+    
+    th "{i}Интересно тут конечно."
+    th "{i}Хотя кому не было бы интересно в другой реальности или осознанном сне, где можно почувствовать и потрогать окружение."
+    
+    window hide
+    scene bg ext_dining_hall_away_day with dissolve2
+    window show
+    
+    "Ещё на подходе к столовой я услышал звуки тарелок и людей, слившиеся в нечто единое."
+    
+    window hide
+    scene bg ext_dining_hall_near_day with dissolve2
+    play ambience ambience_dining_hall_empty fadein 3
+    pause (1)
+    scene stolovaya1 with dissolve2
+    window show
+    
+    "Внутри оне оказалось ничего необычного - металлические стулья, множество столов."
+    "Некоторые пионеры уже трапездничали."
+    "Все остальные стояли в очереди. Я поспешил занять в ней место."
+    
+    window hide
+    pause (3.5)
+    scene bg int_dining_hall_people_day with dissolve2
+    play ambience ambience_dining_hall_full fadein 3
+    window show
+    
+    "Пришло моё время брать еду."
+    
+    show cook_normal with dissolve
+    
+    "На выдаче стояла женщина лет тридцати."
+    pvr "Первое - суп с фрикадельками, второе - пюре с котлетой. {w}Всё возьмёшь или что-то одно?"
+    "Есть в этот раз сильно не хотелось, потому я решил взять только второе."
+    dns "Можно только пюре с котлетой?"
+    
+    window hide
+    pause (1.5)
+    window show
+    
+    "Накладывая мне картошки, повариха вдруг спросила:"
+    pvr "А ты новенький здесь? {w}У меня хорошая память на лица, а тебя вижу в первый раз."
+    dns "Да, буквально час назад приехал."
+    pvr "Ну вот, значит я была права. {w}Меня кстати Марией зовут, но все зовут тётей Машей."
+    dns "Очень приятно, а я Денис."
+    
+    hide cook_normal
+    show cook_smile with dissolve
+    
+    "Она положила мне две котлеты и улыбаясь отдала тарелку."
+    mar "Приятного аппетита!"
+    dns "Спасибо, тёть Маш."
+    
+    window hide
+    hide cook_smile
+    show cook_laugh with dissolve
+    pause (0.5)
+    hide cook_laugh with dissolve2
+    window show 
+    
+    "Я пошёл искать себе место."
+    "Так оказалось, что пустых столов уже не осталось, и сидеть мне в любом случае с кем-то."
+    "Решив, что лучше посидеть с уже известными мне людьми, я начал искать знакомые лица."
+    "Первой на глаза попалась Алиса. Вместе с какой-то неизвестной мне пионеркой она сидела недалеко от центра столовой."
+    "Я подошёл к ним и спросил:"
+    
+    window hide
+    show chair at right
+    show chair2 at left
+    with dissolve
+    show dv smile pioneer close at right
+    show un smile pioneer close at left
+    with dissolve
+    window show
+    
+    dns "Привет ещё раз, можно к вам сесть?"
+    dv "О, а мы как раз тебя обсуждаем. {w}Садись."
+    "Я занял свободный стул."
+    dv "Ленка, это Денис, тот о ком я говорила."
+    un "Привет Денис."
+    dns "Привет."
+    "Произнёс я, и хотел уже приступать к трапезе. {w}Но Лена вдруг спросила:"
+    un "А почему ты не со всеми  на полную смену приехал?"
+    "Не зная, как ответить, я быстро начал выдумывать в голове историю."
+    dns "Э... Ну знаешь, я просто за границей с родителями был, и к началу смены никак не успевал."
+    un "Поняла."
+    
+    window hide
+    scene dvuneat3 with dissolve2
+    window show
+    
+    un "А где ты именно был?"
+    "Однажды мне посчастливилось побывать в Скандинавии, так что придумывать не пришлось."
+    dns "В Стокгольме."  
+    
+    scene dvuneat with dissolve
+    
+    dv "Это же Швеция?"
+    "Спросила Алиса."
+    dns "Всё верно."
+    dv "И как вы до туда доехали?"
+    dns "На пароме из Питера, через Финляндию."
+    
+    scene dvuneat2 with dissolve
+    
+    un "Ничего себе."
+    un "И как там? Красиво наверно?"
+    dns "Да, мне очень понравилось."
+    "У девочек закончились вопросы, и мне наконец дали поесть."
+    
+    window hide
+    pause (2)
+    scene stolovaya1 with dissolve2
+    stop ambience fadeout 2
+    pause (0.1)
+    play sound_loop ambience_dining_hall_empty fadein 4
+    pause (2)
+    window show
+    
+    "Пока Лена с Алисой обсуждали что-то своё, я успел доесть."
+    "Другие пионеры тоже уже расходились."
+    "Взяв пустую тарелку, я встал со стула."
+    
+    window hide
+    show chair at right
+    show chair2 at left
+    with dissolve
+    show dv smile pioneer close at right
+    show un smile pioneer close at left
+    with dissolve
+    window show
+    
+    dns "Пока, девочки."
+    un "Пока, Денис."
+    dv "Увидимся."
+    
+    window hide
+    hide dv smile pioneer close at right
+    hide un smile pioneer close at left
+    with dissolve
+    hide chair at right
+    hide chair2 at left
+    with dissolve
+    pause (1.2)
+    scene bg ext_dining_hall_near_day with dissolve2
+    pause (0.1)
+    stop sound_loop
+    pause (0.1)
+    play ambience ambience_ext_road_day fadein 4
+    pause (0.1)
+    play music music_list["my_daily_life"] fadein 4
+    window show
+   
+    "Сдав грязную посуду, я покинул столовую."
+    
+    show mz normal glasses pioneer far with  dissolve
+    
+    "Лавочки перед входом были заняты какой-то пионеркой в очках."
+    "Выглядела она не добро, поэтому я не решил садиться рядом. Вместо этого отправился на площадь, где тоже можно было посидеть."
+    
+    hide mz
+    with dissolve
+    window hide
+    scene bg ext_square_day with dissolve2
+    window show
+   
+    "Возле Генды дети играли в догонялки."
+    "Я уселся на крайней лавочке."
+    
+    window hide
+    scene semsquore with dissolve2
+    window show
+   
+    "Мир вокруг казался красочным и ярким. {w}А самое главное - живым."
+    "Пышные кроны деревьев, голубое небо, пение птиц..."
+    th "{i}С удовольствием бы жил в месте с похожей атмосферой."
+    th "{i}Выходишь утром во двор, а там зелень, всё цветёт, свежо..."
+    th "{i}Только вот мест рядом, где такое можно было бы увидеть, я не знаю."
+    th "{i}Вокруг только серые многоэтажки, серые дороги, люди... машины..."
+   
+    window hide
+    pause (2)
+    show anim prolog_1 with dissolve2
+    stop ambience fadeout 4
+    stop music fadeout 3
+    window show
+   
+    "Утонув в раздумьях, я даже не заметил как заснул."
+    "И даже шум детей, игравших на площади растворился будто по волшебству."
+    
+    window hide
+    with fade
+    pause (1)
+    with fade
+    window show
+    
+    "Пришёл в себя я от того, что кто-то пытался меня разбудить."
+    
+    window hide
+    play ambience ambience_ext_road_day fadein 2.5
+    play music music_list['glimmering_coals'] fadein 3
+    scene bg ext_square_day with dissolve2
+    show dv smile sport flt  with dissolve
+    window show
+    
+    "Открыв глаза, я увидел, что это не кто-то, а уже знакомая мне пионерка Алиса, почему-то одетая в спортивный наряд."
+    th "{i}И когда она только успела?"
+    dv "Ты что, уснул?"
+    dns "Есть немного."
+    
+    hide dv smile sport flt 
+    show dv laugh sport flt  with dissolve
+    
+    "Девушка рассмеялась."
+    dv "Ну ты даёшь."
+    dns "Ты для этого меня разбудила?"
+    "Недоумеваючи спросил я."
+    
+    hide dv laugh sport flt 
+    show dv smile sport flt  with dissolve
+    
+    dv "Нет... {w}Пойдешь с нами в волейбол играть? {w}Нам одного не хватает."
+    dns "Я не против, только переодеться надо. {w}Не в рубашке же играть."
+    dv "Тогда иди переодевайся. Потом придешь на спорт площадку."
+    dns "Договорились."
+    
+    window hide
+    pause (0.5)
+    stop music fadeout 3
+    pause (0.5)
+    hide dv smile sport flt  with dissolve2
+    window show
+    
+    "Она уже развернулась, и собралась уходить."
+    dns "Постой!"
+    
+    show dv surprise2 sport flt  with dissolve
+    
+    dv "Что...?"
+    dns "А где спорт площадка находится?"
+    "Она показала рукой."
+    dv "Вон там."
+    dns "Спасибо."
+    
+    hide dv surprise2 sport flt 
+    show dv normal sport flt  with dissolve
+   
+    dv "Я тебя жду!"
+    dns "Постараюсь не опаздывать."
+    
+    window hide
+    hide dv normal sport flt  with dissolve2
+    window show
+    
+    "Она ушла, а я пошёл в домик за вещами."
+    
+    window hide
+    scene bg ext_house_of_dv_day with dissolve2
+    pause (1.1)
+    scene domext with dissolve2
+    pause (1.1)
+    play sound sfx_open_cabinet_1
+    play ambience ambience_int_cabin_day fadein 3
+    scene dom with dissolve2
+    window show
+    
+    "Внутри за время моего отсутствия ничего не поменялось."
+    
+    play sound sfx_unzip_sleepbag
+    
+    "Я открыл сумку, достал из неё шорты и футболку."
+    "Быстро переоделся в них, а форму бросил на кровать."
+    
+    play sound sfx_unzip_sleepbag
+    
+    th "{i}Вроде всё."
+    
+    window hide
+    play sound sfx_open_cabinet_1
+    play ambience ambience_day_countryside_ambience fadein 3
+    scene domext with dissolve2
+    pause (1)
+    play music music_list['everyday_theme'] fadein 3
+    scene bg ext_house_of_dv_day with dissolve2
+    window show
+    
+    "По пути назад моё внимание привлекло окно одного из домиков."
+    "Оно было занавешено флагом, с изображённым на нём весёлым роджером."
+    th "{i}Хм, прикольно."
+    
+    window hide
+    pause (1)
+    scene bg ext_square_day with dissolve2
+    pause (1)
+    scene bg ext_dining_hall_away_day with dissolve2
+    pause (1)
+    scene ext_storage_day with dissolve2
+    pause (1)
+    play ambience ambience_forest_evening fadein 5
+    scene bg ext_playground_day with dissolve2
+    pause (1)
+    window show
+    
+    "Вскоре я вышел к спортивной площадке."
+    "С краю виднелся воллейбольный корт, где меня уже ждали."
+    
+    window hide
+    scene ext_volley_court_7dl with dissolve2
+    pause (0.5)
+    show dv normal sport flt  at left
+    show us smile sport at right
+    with dissolve
+    window show
+    
+    usp "Алиска, это он?"
+    dv "Да, Ульян."
+    us "Ну наконец-то! Почему так долго?"
+    dns "Извиняйте."
+    us "Ладно, проехали."
+    us "Ты играть хоть умеешь?"
+    dns "В волейбол то?"
+    us "Ага."
+    dns "Конечно умею!"
+    us "Ну тогда ладно."
+    dns "Как делиться будем?"
+    us "А зачем делиться? {w}Мы втроём против тех ребят."
+    "Она показала на пионеров, стоявших на другой стороне поля."
+    dns "Хорошо."
+    
+    stop music fadeout 5
+    
+    dv "Значит начинаем."
+    
+    window hide
+    pause (1)
+    play music music_list['always_ready'] fadein 6
+    hide dv normal sport flt  at left
+    hide us smile sport at right
+    with dissolve
+    pause (1)
+    window show
+    
+    "Игра началась."
+    "Первыми подавали наши противники."
+    
+    play sound sfx_soccer_ball_kick
+    
+    "Удар. {w}Мяч летит в край поля. {w}Ульяна отбивает его, а Алиса запускает назад."
+    "Соперники этого не ожидали, потому нам удалось заработать очко."
+    dns "Так держать!"
+    
+    show dv smile sport flt  at left
+    show us grin sport at right
+    with dissolve
+    
+    us "Смотри не профукай подачу."
+    dns "Наблюдай."
+    "Гордо сказал я."
+    
+    window hide
+    hide dv smile sport flt  at left
+    hide us grin sport at right
+    with dissolve
+    pause (1)
+    window show
+    play sound sfx_soccer_ball_kick
+    
+    "Затем взял мяч, отошёл назад, подкинул его и ударил сверху."
+    "Было бы комично, если бы сейчас ничего не получилось, но удача была на моей стороне."
+    "Мяч коснулся земли почти у края поля."
+    "Счёт стал {b}2 : 0."
+    "Недовольные противники вернули мяч."
+    "Я снова попытался дать подачу сверху."
+    
+    play sound sfx_soccer_ball_kick
+    
+    "Получилось криво. {w}Мяч даже не перелетел сетку."
+    
+    window hide
+    show dv normal sport flt  at left
+    show us dontlike sport at right
+    with dissolve
+    window show
+    
+    us "И что это было?"
+    "Недовольно произнесла Ульяна."
+    dv "Да чё ты, нормально же всё пока."
+    us "Это пока. {w}Противникам нельзя отдавать ни очка! Мне так Иван Анатольевич говорил!"
+    
+    show us normal sport at right with dissolve
+    
+    th "{i}Надо исправлять положение."
+    "Алиса отдала мяч противникам, и те приготовились подавать."
+    
+    window hide
+    pause (1)
+    hide dv normal sport flt  at left
+    hide us dontlike sport at right
+    with dissolve
+    pause (1)
+    play sound sfx_soccer_ball_kick
+    
+    "Удар, и мяч летит в центр."
+    "Я отбиваю его, Алиса накидывает Ульяне."
+    "Та ударяет, и мяч ложится на вражеском половине."
+    
+    pause (1)
+    
+    "Счёт становится {b}3 : 1."
+    
+    show dv grin sport flt at left
+    show us grin sport at right
+    with dissolve
+
+    dns "Классно сработали."
+    dv "Да, все молодцы."
+    
+    window hide
+    pause (1)
+    hide dv grin sport flt at left with dissolve
+    hide us grin sport at right  with dissolve
+    scene volleyball with dissolve2
+    pause (1)
+    window show
+    
+    "Следующие полтора часа мы провели за игрой."
+    "Наша команда работала быстро и слаженно. Будто мы играем не первый раз. Хотя на деле едва знакомы."
+    
+    window hide
+    stop music fadeout 4
+    stop ambience fadeout 2
+    pause (2.5)
+    scene black with dissolve
+    show logo with dspr
+    pause (1)
+    hide logo
+    show logo1
+    with dspr
+    pause (0.3)
+    hide logo1
+    show logo
+    with dspr
+    pause (1)
+    hide logo with dissolve
+    scene ext_volley_court_7dl with dissolve2
+    play ambience ambience_forest_evening fadein 4
+    $ persistent.timeofday = "sunset"
+    pause (1)
+    window show
+    
+    "Всё хорошее имеет свойство кончаться."
+    
+    window hide
+    show dv smile sport flt  at left
+    show us smile sport at right
+    with dissolve
+    window show
+    
+    "Спустя час игра закончилась, все начали расходиться."
+    "Ульяна сказала что пропустит ужин и убежала играть в футбол."
+    
+    window hide
+    hide us smile sport at right with dissolve
+    hide dv smile sport flt  at left with dspr
+    show dv smile sport flt  with dissolve
+    window show
+    
+    "Ребята, против которых мы играли, пошли по своим делам."
+    
+    "А {i}мы{/i} с Алисой пошли в домики."
+    "Попутно обсуждая только что окончившийся матч."
+    
+    window hide
+    hide dv smile sport flt  with dissolve
+    pause (0.3)
+    scene bg ext_dining_hall_away_sunset with dissolve2
+    pause (1)
+    scene bg ext_square_sunset with dissolve2
+    pause (0.5)
+    show dv smile sport flt  with dissolve
+    window show
+    
+    dv "Классно поиграли."
+    dns "Да, мне тоже понравилось."
+    
+    hide dv smile sport flt 
+    show dv grin sport flt with dissolve
+    
+    dv "Знаешь, я сначала думала ты откажешься или скажешь, что играть не умеешь."
+    dv "А оказалось что ты даже неплохо играешь."
+    dns "Вот видишь, не прогадала ты с тем, кого звать."
+    dv "Ага."
+    dns "Приглашай ещё. От игры на свежем воздухе грех отказываться."
+    th "{i}Тем более в компании красивой девушки."
+    dv "Буду знать что ты не против поиграть."
+    
+    hide dv grin sport flt dspr
+    show dv smile sport flt  with dissolve
+    
+    "Хоть она и девочка, разговор с ней шёл легко."
+    "Возможно это окружающая среда так повлияла на моё поведение."
+    "А возможно {i}что-то другое."
+    
+    window hide
+    hide dv smile sport flt  with dissolve
+    pause (0.5)
+    scene bg ext_houses_sunset with dissolve2
+    pause (1)
+    scene dvhousesunset with dissolve2
+    window show
+     
+    "Проходя мимо домика с флагом на стекле, Алиса вдруг остановилась."
+    
+    show dv normal sport flt  with dissolve
+    
+    dv "Я в этом домике живу."
+    dns "Прикольно окно украсили. Я оценил."
+    
+    hide dv normal sport flt 
+    show dv grin sport flt with dissolve
+    
+    dv "Мы с Ульяной старались."
+    dns "Выглядит и правда круто. {w}А вы вместе живёте?"
+    dv "Да, а что?"
+    dns "А сколько ей лет? Выглядит она младше тебя."
+    dv "Да, она на два с половиной года младше."
+    dns "А сколько ей?"
+    dv "Четырнадцать. Но ей это не мешает на равных общаться с ребятами по-старше."
+    dv "Ей скучно с ровесниками, поэтому её в старший отряд перевели."
+    dns "Понял."
+    
+    hide dv grin sport flt
+    show dv smile sport flt  with dissolve
+    
+    dv "Ладно, ещё увидимся."
+    dns "Давай."
+    
+    window hide
+    play sound sfx_open_cabinet_2 
+    pause (1)
+    hide dv smile sport flt  with dissolve
+    window show
+    
+    "Она скрылась в дверях."
+    
+    pause (1.2)
+    
+    "Я ещё немного постоял у её двери и пошёл к себе."
+    
+    window hide
+    scene domexteven with dissolve2
+    pause (0.8)
+    play sound sfx_open_cabinet_1
+    pause (0.3)
+    play ambience ambience_int_cabin_day fadein 4
+    scene dom with dissolve2
+    pause (0.3)
+    window show
+    
+    "Зайдя в домик, я плюхнулся на кровать."
+    play sound fall_bed
+    "А затем по привычке достал телефон."
+    "Остановил меня значёк отсутствия сети в правом верхнем углу экрана."
+    th "{i}Ах, совсем забыл! Я же хер пойми где, и не знаю как сюда попал."
+    "Зато мне удалось узнать время - {b}18:22"
+    "После игры я довольно вымотался. {w}Поэтому решил передохнуть, и закрыл глаза."
+    
+    window hide
+    scene anim prolog_1 with dissolve2
+    window show
+    
+    "Впервые за день я наконец остался один на один с самим собой."
+    "Мысли о попадании в лагерь ударили в голову."
+    th "{i}Что же это за место такое?"
+    th "{i}Неужели я и правда как герой какого-нибудь романа перенёсся в прошлое?"
+    th "{i}Но ведь в любых событиях есть какой-то смысл."
+    th "{i}Тогда в чём смысл моего попадания сюда?"
+    th "{i}Да и куда это «Сюда»?"
+    th "{i}Какой-то пионер лагерь в совке, на дворе лето."
+    th "{i}Причём люди в лагере знают о том, что я должен был приехать."
+    th "{i}Можно предположить что я, к примеру, поменялся с кем-то местами."
+    th "{i}И сейчас по современному Петербургу гуляет какой-то Вася из восьмедесятых. А может и девяностых."
+    th "{i}Хах, интересно какого ему там."
+    th "{i}Насколько я понял, я тут ещё и помолодел."
+    th "{i}Если в лагере присутствует система отрядов, то дети в них должны делиться по возрасту."
+    th "{i}Значит если Ульяне четырнадцать, то Алисе примерно семнадцать, как и всем остальным пионерам, включая меня."
+    th "{i}Но не слишком ли поздно - пионерия в семнадцать?"
+    th "{i}Из курса истории я помню, что в 1987 году в результате новой реформы ввели 11-летнее образование со сдвигом всех классов, начиная с четвёртого, на год вперёд."
+    th "{i}В тупую спрашивать: «А какой сейчас год?» будет странно, так что через вопросы о классе, думаю, можно будет это выяснить." 
+    
+    pause (0.8)
+    
+    th "{i}Интересная ситуация конечно."
+    th "{i}Попал в прошлое. И как я до такого дошёл?"
+    th "{i}Жаль только не рассказать никому - не поверят."
+    "Представляя как друзья, которым я повествую о своём путешествии во времени и пространстве, крутят палец у виска и говорят что-то на подобии: «Чем это тебя таким тяжелым в питере накачали?» я не заметил как окончательно погрузился в сон."
+    
+    window hide
+    scene black with dissolve2
+    pause (2)
+    play ambience ambience_int_cabin_night fadein 5
+    window hide
+    pause (1)
+    $ persistent.sprite_time = "night"
+    $ persistent.timeofday = "night"
+    scene domnight with dissolve2
+    window show
+    pause (1)
+    
+    "Судя по тому, что проснулся я в темноте, на лагерь опустилась ночь."
+    
+    play sound sfx_stomach_growl
+    
+    "В животе сильно урчало."
+    th "{i}Понятное дело, ужин то я проспал."
+    
+    pause (1.0)
+    
+    "Я быстро переоделся в пионерскую форму."
+    
+    window hide
+    play sound sfx_open_cabinet_1
+    scene domextnight with dissolve2
+    window show
+    
+    th "{i}Надеюсь столовая ещё открыта или Мария сделает мне одолжение."
+    
+    window hide
+    scene bg ext_house_of_dv_night with dissolve2
+    pause (1)
+    scene ext_houses_night with dissolve2
+    pause (1)
+    scene bg ext_square_night with dissolve2
+    window show
+    
+    "В лагере было пусто."
+    "Вокруг царила тишина и спокойствие, сопровождаемые стрекотанием сверчков."
+    
+    window hide
+    pause (0.75)
+    scene bg ext_dining_hall_away_night with dissolve2
+    pause (0.75)
+    window show
+    
+    "Света внутри нет."
+    "Но в потёмках мне удалось разглядеть какую-то фигуру у двери."
+    th "{i}Может это повариха, и она сможет меня накормить?"
+    
+    window hide
+    scene bg ext_dining_hall_near_night with dissolve2
+    play sound_loop sfx_alisa_picklock fadein 2
+    window show
+    
+    "Подойдя ближе, я услышал звук, похожий на то, будто кто-то ковырял замок."
+    
+    pause (0.6)
+    show dv normal pioneer with dissolve
+
+    "Взломщиком оказалась Алиса."
+    "Она усердно чем-то пыталась открыть дверь, склонившись над замочной скважиной."
+    dns "Алис!"
+    
+    pause (0.7)
+    stop sound_loop
+    hide dv normal pioneer with dissolve
+    show dv scared1 pioneer flt with dissolve
+    
+    dv "..."
+    
+    pause (1)
+    hide dv scared1 pioneer flt
+    show dv angry pioneer with dissolve
+    
+    dv "Напугал блин."
+    dns "Ты чего тут делаешь?"
+    
+    show dv normal pioneer with dissolve
+    
+    dv "А что, не заметно?"
+    dns "Да пока не особо."
+    dv "Столовую пытаюсь открыть, не наелась."
+    dns "А я ужин проспал..."
+    dv "Ну так помоги открыть, и вместе поедим."
+    th "{i}Конечно можно попытаться вскрыть столовую, и провести ужин в компании девушки, но и подставлять под удар лояльность поварихи тоже не хочется."
+    
+    menu:
+        "Согласиться на взлом":
+            
+            $ persistent.sprite_time = "night"
+            th "{i}Ладно, всё-равно есть хочу."
+            dns "Ну показывай тогда."
+            "Она отошла от двери на шаг."
+            "Из замочной скважины торчала отмычка."
+            dv "Вот."
+            "Я вытащил её и осмотрел."
+            th "{i}Похоже, когда-то это была заколка для волос."
+            dns "Сама сделала?"
+            dv "Ну да."
+            th "{i}Пытаться открыть этим что-то равносильно тому, что пытаться разобрать автомобиль голыми руками."
+            "Двери столовой были сделаны из дерева и имели небольшие окошки. {w}Появилась идея."
+            "Я вернул Алисе отмычку."
+            
+            show dv surprise pioneer with dissolve
+            
+            dv "И как ты её голыми руками собрался открыть?"
+            "Недоумевающе спросила она."
+            dns "Где-то я раньше видел, что у таких дверей двигались стёкла."
+            dv "Ну да, только тут их не подцепить. {w}Ульяна уже пробовала."
+            dns "Попробовать стоит."
+            
+            pause (0.7)
+            
+            "Я приложил ладонь к стеклу и надавил."
+            
+            window hide
+            pause (2)
+            window show
+            
+            "Через пару секунд оно двинулось, образовав сантиметровую щель."
+            
+            play sound window_dining
+            
+            "Я отодвинул его чуть больше, чтобы туда пролезла рука."
+            
+            play sound sfx_lock_open
+            
+            "Затем дотянулся до ручки и открыл замок с внутренней стороны."
+            
+            hide dv surprise pioneer with dspr
+            show dv grin pioneer flt with dissolve
+            play sound sfx_open_cupboard
+            
+            "Открыл дверь, и жестом пригласил Алису внутрь."
+            dns "Дамы вперёд."
+            dv "Неплохо."
+            
+            window hide
+            scene bg int_dining_hall_night with dissolve2
+            play ambience ambience_int_cabin_night fadein 3
+            pause (1)
+            play sound sfx_close_cabinet
+            pause (1)
+            window show
+            
+            dns "Что у нас сегодня на ужин?"
+            "Сказал я, cадясь за стол, пока Алиса шарилась на кухне."
+            dv "Булки и кефир!"
+            dns "Нехватает только музыки!"
+            
+            show dv smile pioneer with dissolve
+            
+            dv "Это да, но боюсь нас услышат."
+            "Она поставила еду на стол и села рядом."
+            dv "Угощайся."
+            dns "Благодарю."
+            
+            window hide
+            scene dveda with dissolve2
+            pause (1.5)
+            window show
+            
+            "Спустя какое-то время стало скучно."
+            th "{i}Чего молча сидеть? {w}Да и девочку стоит по-ближе узнать."
+            "Я начал диалог."
+            dns "Слушай, Алис, а как тебе вообще в этом лагере? {w}Нравится?"
+            dv "Ну да, я уже не первый раз сюда езжу и пока не надоедает."
+            dns "Есть что-то конкретное?"
+            dv "Природа наверное... Она здесь шикарная."
+            dns "Соглашусь."
+            dns "А вы с Ульяной здесь познакомились?"
+            dv "Да. А потом оказалось что мы из одного города."
+            dns "Мир тесен, как говорится."
+            dv "Это точно."
+            
+            window hide
+            scene bg int_dining_hall_night with dissolve2
+            show chair with dissolve
+            show dv smile pioneer close with dissolve
+            window show
+            
+            "Как продолжать диалог я не знал, но за меня это сделала Алиса."
+            dv "Расскажи тоже что-нибудь."
+            dns "А что тебя интересует?"
+            "Сказал я, смотря в её удивительного цвета глаза. {w}Она улыбнулась, и ответила:"
+            dv "Ну о себе. Что дома делаешь, чем занимаешься впринципе."
+            "Я задумался, и отвёл взгляд."
+            dns "Ничего особенного впринципе, общаюсь с друзьями, гуляем с ними часто."
+            dns "Увлекаюсь путешествиями, обожаю музыку."
+            dv "Что слушаешь?"
+            dns "Да что душе понравится. {w}Но чаще всего что-то из рока, панк-рока."
+            dv "У нас похожие вкусы. {w}А сам играешь на чём-нибудь?"
+            dns "Нет, а ты?"
+            dv "На гитаре."
+            dns "Классно."
+            dns "Знаешь, я люблю когда в песне есть смысл или лирика, как считаешь?"
+            
+            hide dv smile pioneer with dspr
+            show dv thinking2 pioneer close flt with dissolve
+            
+            "Она задумалась."
+            
+            hide dv thinking2 pioneer close flt with dspr
+            show dv smile pioneer close with dissolve
+            
+            dv "Да, согласна. {w}Музыка это большое искусство."
+            dns "Поддерживаю."
+            "Я бы хотел продолжить беседу, но не тут то было."
+            voice "Кто окно открыл?"
+            "Донеслось вдруг со стороны входа."
+            
+            hide dv smile pioneer close with dissolve
+            show dv surprise2 pioneer close flt  with dissolve
+            
+            dv "Это Славя! Она обход ночной за вожатую делает."
+            dns "Прячемся быстрее."
+            
+            window hide
+            scene night_event with dissolve2
+            window show
+            
+            "Алиса быстро залезла под стол, а я встал за колонну."
+            "Из-за неё мне было видно, как в окно заглядывает Славяна."
+            th "{i}Как я мог забыть его задвинуть то?"
+            sl "Если там кто-то есть, то лучше выходите, иначе я закрою, и будете сидеть до утра!"
+            th "{i}Так мы к тебе и выйдем."
+            "Ненамеренные выдавать себя, мы с Алисой остались на свои местах."
+            
+            window hide
+            pause (0.75)
+            play sound window_dining
+            pause (0.75)
+            scene bg int_dining_hall_night with dissolve2
+            window show
+            
+            "Славя подождала ещё немного, и не получив ответа, закрыла окно и ушла."
+            
+            show dv normal pioneer with dissolve
+            
+            "Мы выбрались из своих укрытий."
+            dv "Вот же коза белобрысая!"
+            dns "А вы не в ладах?"
+            dv "Я с ней не общаюсь. Слишком уж правильная она, да ещё и стукачит."
+            dns "Мы толком не разговаривали, но раз уж ты так говоришь, то буду иметь ввиду."
+            dv "Короче, я щас ещё булок прихвачу, а ты пока иди окно открывай."
+            dns "А чего просто через дверь не выйдем?"
+            dv "А вдруг она там караулит?"
+            dns "Ладно, убедила."
+            
+            window hide
+            pause (0.5)
+            hide dv with dissolve
+            pause (1)
+            play sound sfx_open_window
+            play ambience ambience_forest_night
+            pause (0.5)
+            window show
+            
+            "Она ушла на кухню, а я подошёл к окну, повернул ручку и открыл его."
+            "Меня окутал приятный ночной бриз."
+            "В столовой было довольно душно. Облакотившись на окно, я принялся полной грудью вдыхать свежий воздух."
+            
+            show dv smile4 pioneer flt with dissolve
+            
+            "Через минуту подошла Алиса, державшая в одной руке бумажный пакет, куда положила еду, а другой протягивала мне булочку."
+            dv "Держи."
+            "Выглядело это {i}очень мило."
+            dns "Ой, спасибо большое."
+            
+            hide dv smile4 pioneer flt with dspr
+            show dv smile5 pioneer flt
+            with dissolve
+            
+            dv "Да не за что."
+            "Она душевно улыбнулась."
+            "Я спрятал её маленький презент в карман."
+            dns "Всё, пойдем."
+            dv "Угу."
+            "Я забрался на подоконник и спрыгнул вниз, на траву."
+            "Затем помог Алисе аккуратно спуститься."
+            
+            window hide
+            scene black with dissolve2
+            scene bg ext_square_night with dissolve
+            window show
+            
+            "Вскоре мы вдвоём уже шли вдоль площади, по направлению своих домиков."
+            
+            window hide
+            scene bg ext_house_of_dv_night with dissolve2
+            window show
+            
+            show dv smile pioneer with dissolve
+            
+            dv "Ну всё, я пошла."
+            dns "Спасибо за вечер."
+            
+            hide dv smile pioneer with dspr
+            show dv grin pioneer flt with dissolve
+            
+            dv "И тебе."
+            
+            play sound sfx_open_cabinet_1
+            hide dv grin pioneer flt with dissolve
+            
+            "Она помахала мне рукой и скрылась в дверях."
+            "А я пошёл к себе."
+            
+            window hide
+            scene domextnight with dissolve2
+            play ambience ambience_int_cabin_night fadein 4
+            pause (1)
+            scene domnight with dissolve2
+            window show
+            
+            "Сняв с себя одежду, оставил её на полу."
+            "Затем плюхнулся на кровать."
+            th "{i}Боже, завтра же ещё на эту линейку идти ни свет ни заря."
+            "Пришлось встать ещё раз."
+            "Я поставил будильник в телефоне на {b}7:40{/b} и наконец лёг в кровать."
+            
+            window hide
+            scene black with dissolve2
+            stop ambience fadeout 4
+            pause (5)
+            scene anim prolog_1 with dissolve2
+            window show
+            
+            "Спать совершненно не хотелось."
+            play music aprilrain fadein 6
+            "Пока я лежал с закрытыми глазами, в моей голове было лишь одно - мысли о том, что было в столовой, а конкретно о девочке Алисе, с которой я там находился."
+            th "{i}Людей сближает общение и вместе пережитые моменты."
+            th "{i}Как же так вышло, что когда я попал сюда, то контактировал больше всего с ней, а не с кем-то другим?"
+            th "{i}Раньше я так много с девушками не общался."
+            
+            pause (2)
+            
+            th "{i}Было не с кем..."
+            
+            pause (2)
+            
+            th "{i}Мда."
+            
+            pause (2)
+            
+            th "{i}Это ведь какой-то паррадокс!"
+            th "{i}Там, где я был раньше, у меня в окружении была уйма классных парней, со многими из них можно было поговорить на разные темы, и они поддержат разговор."
+            th "{i}Почти у каждого прекрасная внешность, мускулистое тело. Интересные увлечения, обширные знания в разных сферах..."
+            th "{i}Но ни у одного нет пары."
+            th "{i}То же самое можно сказать и про девушек из моего круга общения."
+            th "{i}Все из них - прекрасные, умные и красивые дамы, с которыми также можно приятно общаться."
+            th "{i}Но никто ни с кем не встречается."
+            th "{i}И ведь с этим ничего не поделать!"
+            th "{i}Людей нельзя просто взять, и заставить любить."
+            th "{i}Даже если говорить о {/i}{b}любви{/b}{i} с первого взгляда, то это на деле она оказывается лишь симпатией."
+            th "{i}Ведь многие просто не различают эти два понятия."
+            th "{i}Любовь - высшее чувство, которое появляется между двумя людьми разного пола."
+            th "{i}Любовь выше дружбы, и ничто не сближает людей так, как она."
+            th "{i}Но и внезапной любовь не может быть, ведь её формирование - длительный процесс, который начинается с взаимной симпатии, и постепенно, из-за тесного общения, превращается в маленький огонёк души, который легко потухнет, если пропадёт взаимность."
+            th "{i}А в реальности люди пытаются найти любовь в интернете, через сайты и группы для знакомств."
+            th "{i}Но ведь общение в сети и общение в жизни - это совершенно разные несвязные вещи."
+            th "{i}Отношения должны быть консервативными, и {/i}{b}общество{/b}{i} в них должно играть наименьшую роль."
+            
+            window hide
+            pause (2)
+            scene black with dissolve
+            pause (2)
+            window show
+            
+            "После длительного монолога я наконец смог заснуть."
+            
+            window hide
+            pause (4)
+            stop music fadeout 4
+            pause (2)
+            
+            jump estr_TFOT2
+            
+        "Предложить бутерброды":
+            
+            $ persistent.sprite_time = "night"
+            dns "И чем ты собралась её открывать?"
+            "Она отошла от двери на шаг и продемонстрировала мне отмычку, торчавшую из замка."
+            dv "Вот."
+            "Я вытащил её и осмотрел. {w}Сделана она была из заколки."
+            dns "Мда, с таким инструментом мы тут до утра провозимся."
+            
+            show dv angry pioneer with dissolve
+            
+            dv "У тебя есть другие идеи?"
+            dns "Есть. {w}Я с собой бутербродов привёз, можем ко мне пойти, я тебя угощу."
+            
+            show dv normal pioneer with dissolve
+            
+            "Она немного подумала, и согласилась."
+            dv "Ладно, пойдём."
+            
+            window hide
+            pause (1)
+            scene bg ext_dining_hall_away_night with dissolve2
+            pause (1)
+            scene bg ext_square_night with dissolve2
+            pause (1)
+            scene bg ext_house_of_dv_night with dissolve2
+            pause (1)
+            show dv normal pioneer with dissolve
+            
+            dns "Ульяна уже спит?"
+            "Поинтересовался я у Алисы, когда мы проходили мимо её домика."
+            dv "Она книжку читала когда я уходила."
+            dns "Она что, в темноте читает?"
+            
+            show dv smile pioneer with dissolve
+            
+            dv "Не, у нас лампа есть, мы её включаем чтоб вожатая не заходила во время обхода."
+            dns "И как? Спасает от визита?"
+            dv "Не всегда."
+            dns "И что же вы делаете?"
+            dv "Она когда приходит, по лестнице на цыпочках поднимается, но мы всё-равно слышим, и притворяемся будто спим."
+            dns "А если спалит?"
+            dv "Ну нас ещё ни разу не палила. Но одних ребят заставила из-за этого целый день в столовой дежурить."
+            dns "Это серьёзное наказание?"
+            dv "Ну считай весь день торчишь там. Ни погулять, ни на пляж сходить."
+            dns "Тут пляж есть?"
+            dv "Да. Лагерь же на берегу реки находится."
+            dns "Прикольно. Надо будет сходить."
+            dv "А ты не знал?"
+            dns "Да как-то не рассказывали."
+            dv "Ну приходи завтра, мы с Ульянкой купаться утром собирались."
+            dns "Плавки бы где найти..."
+            dv "У вожатой попроси, у неё точно есть."
+            
+            show dv laugh pioneer with dissolve
+            
+            dv "Ну если не найдешь, то я тебе стринги розовые дам."
+            dns "Боюсь спросить зачем они тебе."
+            dv "Ты не подумай. Просто кто-то с прошлой смены у нас в домике их оставил."
+            
+            show dv smile pioneer with dissolve
+            
+            dns "Вот так находка."
+            dv "Да уж."
+            
+            window hide
+            pause (1)
+            scene domextnight with dissolve2
+            window show
+            
+            $ persistent.sprite_time = "night"
+            "Разговаривая, мы подошли к моему домику."
+            "Я открыл дверь и пригласил Алису внутрь."
+            
+            window hide
+            play ambience ambience_int_cabin_night fadein 4
+            play sound sfx_open_cabinet_2
+            scene domnight with dissolve2
+            window show
+            
+            "Она мельком осмотрела комнату, отодвинула себе стул и села."
+            
+            show chair with dissolve
+            show dv smile pioneer close with dissolve
+            
+            dv "Доставай что у тебя там есть."
+            dns "Сейчас только..."
+            
+            play sound light
+            $ persistent.sprite_time = "day"
+            scene domintnight2
+            show chair
+            show dv smile pioneer close
+            with dspr
+            pause (0.3)
+            show dv surprise2 pioneer close flt with dissolve
+            
+            "Лунный свет и так освещал комнату, но как по мне, его было не достаточно."
+            dv "Ты чего!"
+            "Всполошилась вдруг Алиса."
+            dns "А что такого?"
+            dv "Отбой уже был! Щас вожатая блин придёт."
+            
+            play sound light
+            $ persistent.sprite_time = "night"
+            hide dv surprise2 pioneer close flt 
+            scene domnight
+            show chair
+            show dv surprise2 pioneer close flt
+            with dspr
+            
+            dns "Ладно-ладно, не переживай ты так."
+            
+            hide dv surprise2 pioneer close flt with dspr
+            show dv normal pioneer close with dissolve
+            play sound jimbeam
+            
+            "Я достал из под кровати сумку. {w}Послышался звон коньяка."
+            dv "Что это у тебя там звинит?"
+            dns "Да так, воды попить взял."
+            "Нащупав пакет с бутербродами, я вытащил его наружу и положил перед ней."
+            dns "У меня ещё пироженное есть. Будешь?"
+            
+            show dv smile pioneer close with dissolve
+            
+            dv "Всё на стол!"
+            "Я усмехнулся, вытащил пачку пироженного и поставил её рядом с бутербродами."
+            dns "Вот, угощайся."
+            dv "Спасибо."
+            
+            window hide
+            pause (2)
+            scene black
+            show dv_thinking_close
+            with dissolve2
+            pause (1)
+            window show
+            
+            "Алиса, кажется, задумалась о чём-то, пока жевала."
+            "А я молча наблюдал за тем, как девочка ест, за тем, как мило выглядело её лицо в свете луны."
+            
+            window hide
+            pause (2)
+            window show
+            
+            "Наконец мне стало скучно, и я заговорил:"
+            
+            scene domnight
+            show chair
+            show dv normal pioneer close
+            with dspr
+            
+            dns "Слушай, Алис, а как тебе вообще в этом лагере? {w}Нравится?"
+            "Она взглянула на меня."
+            dv "Ну да, я уже не первый раз сюда езжу и пока не надоедает."
+            dns "Есть что-то конкретное?"
+            dv "Природа наверное... Она здесь шикарная."
+            dns "Соглашусь."
+            dns "А вы с Ульяной здесь познакомились?"
+            dv "Да. А потом оказалось что мы из одного города."
+            dns "Мир тесен, как говорится."
+            dv "Это точно."
+            
+            window hide
+            scene domnight with dissolve2
+            show chair with dissolve
+            show dv smile pioneer close with dissolve
+            window show
+            
+            "Как продолжать диалог я не знал, но за меня это сделала Алиса."
+            dv "Расскажи тоже что-нибудь."
+            dns "А что тебя интересует?"
+            "Сказал я, смотря в её удивительного цвета глаза. {w}Она улыбнулась, и ответила:"
+            dv "Ну о себе. Что дома делаешь, чем занимаешься впринципе."
+            "Я задумался, и отвёл взгляд."
+            dns "Ничего особенного впринципе, общаюсь с друзьями, гуляем с ними часто."
+            dns "Увлекаюсь путешествиями, обожаю музыку."
+            dv "Что слушаешь?"
+            dns "Да что душе понравится. {w}Но чаще всего что-то из рока, панк-рока."
+            dv "У нас похожие вкусы. {w}А сам играешь на чём-нибудь?"
+            dns "Нет, а ты?"
+            dv "На гитаре."
+            dns "Классно."
+            dns "Знаешь, я люблю когда в песне есть смысл или лирика, как считаешь?"
+            
+            hide dv smile pioneer with dspr
+            show dv thinking2 pioneer close flt with dissolve
+            
+            "Она задумалась."
+            
+            hide dv thinking2 pioneer close flt with dspr
+            show dv smile pioneer close with dissolve
+            
+            dv "Да, согласна. {w}Музыка это большое искусство."
+            dns "Поддерживаю."            
+            
+            
+            
+            
+            
+            
