@@ -525,23 +525,30 @@ init:
     # days
     image day3 = getSprite("mods/TFT/image/sprites/misc/day3.png")
 
-    screen tft_menu:
-        vbox xalign 0.10 yalign 0.5 spacing 100:
+    screen tft_menu: 
             imagebutton:
-                auto "mods/TFT/image/menu/start_2_%s.png"
+                xalign 0.10 yalign 0.25
+                auto "mods/TFT/image/menu/tft_start_%s.png"
                 action Jump ("tft_prolog")
+
             imagebutton:
-                auto "mods/TFT/image/menu/tracklist_%s.png"
+                xalign 0.10 yalign 0.50
+                auto "mods/TFT/image/menu/tft_tracklist_%s.png"
                 action Jump ("tft_menu_tracklist")
+
             imagebutton:
-                auto "mods/TFT/image/menu/exit_2_%s.png"
+                xalign 0.10 yalign 0.75
+                auto "mods/TFT/image/menu/tft_exit_%s.png"
                 action Jump ("tft_menu_exit")
 
 label tft_menu_main:
+    $ day_time()
+    scene vorota with dissolve
+    play ambience ambience_ext_road_day
     call screen tft_menu
 
 label tft_menu_tracklist:
-    "Здесь будет вся музыка из мода"
+    "Здесь будет музыка из мода"
 
 label tft_menu_exit:
     return
