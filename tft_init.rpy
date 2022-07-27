@@ -527,28 +527,40 @@ init:
 
     screen tft_menu: 
             imagebutton:
-                xalign 0.10 yalign 0.25
+                xalign 0.05 yalign 0.10
                 auto "mods/TFT/image/menu/tft_start_%s.png"
                 action Jump ("tft_prolog")
 
             imagebutton:
-                xalign 0.10 yalign 0.50
+                xalign 0.05 yalign 0.30
                 auto "mods/TFT/image/menu/tft_tracklist_%s.png"
                 action Jump ("tft_menu_tracklist")
 
             imagebutton:
-                xalign 0.10 yalign 0.75
+                xalign 0.05 yalign 0.90
                 auto "mods/TFT/image/menu/tft_exit_%s.png"
                 action Jump ("tft_menu_exit")
 
+    screen tft_tracklist:
+            imagebutton:
+                xalign 0.05 yalign 0.90
+                auto "mods/TFT/image/menu/tft_back_%s.png"
+                action Jump ("tft_menu_plus")
+
+label tft_menu_plus:
+    $ day_time()
+    play ambience ambience_ext_road_day
+    scene vorota with dspr
+    call screen tft_menu with dissolve
+            
 label tft_menu_main:
     $ day_time()
-    scene vorota with dissolve
     play ambience ambience_ext_road_day
-    call screen tft_menu
+    scene vorota with dissolve2
+    call screen tft_menu with dissolve
 
 label tft_menu_tracklist:
-    "Здесь будет музыка из мода"
+    call screen tft_tracklist with dissolve
 
 label tft_menu_exit:
     return
