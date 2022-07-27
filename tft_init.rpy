@@ -526,26 +526,26 @@ init:
     image day3 = getSprite("mods/TFT/image/sprites/misc/day3.png")
 
     screen tft_menu: 
-            imagebutton:
-                xalign 0.95 yalign 0.90
-                auto "mods/TFT/image/menu/tft_start_%s.png"
-                action Jump ("tft_prolog")
+        imagebutton:
+            xalign 0.95 yalign 0.90
+            auto "mods/TFT/image/screens/tft_start_%s.png"
+            action Jump ("tft_prolog")
 
-            imagebutton:
-                xalign 0.50 yalign 0.90
-                auto "mods/TFT/image/menu/tft_tracklist_%s.png"
-                action Jump ("tft_menu_tracklist")
+        imagebutton:
+            xalign 0.50 yalign 0.90
+            auto "mods/TFT/image/screens/tft_tracklist_%s.png"
+            action Jump ("tft_menu_tracklist")
 
-            imagebutton:
-                xalign 0.05 yalign 0.90
-                auto "mods/TFT/image/menu/tft_exit_%s.png"
-                action Jump ("tft_menu_exit")
+        imagebutton:
+            xalign 0.05 yalign 0.90
+            auto "mods/TFT/image/screens/tft_exit_%s.png"
+            action Jump ("tft_menu_exit")
 
     screen tft_tracklist:
-            imagebutton:
-                xalign 0.05 yalign 0.90
-                auto "mods/TFT/image/menu/tft_back_%s.png"
-                action Jump ("tft_menu_plus")
+        imagebutton:
+            xalign 0.05 yalign 0.90
+            auto "mods/TFT/image/screens/tft_back_%s.png"
+            action Jump ("tft_menu_plus")
 
 label tft_menu_plus:
     $ day_time()

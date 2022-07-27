@@ -331,6 +331,9 @@ label tft_1:
 
     "Вожатая пила чай сидя за столом."
     dns "Ольга Дмитриевна добрый день!"
+
+    show mt panama normal with dissolve
+
     mt "Привет Денис, да уже вечер почти."
     mt "Ты просто так или по делу?"
     dns "По делу. {w}У вас случаем нету лишней спортивной формы?"
@@ -338,40 +341,82 @@ label tft_1:
     dns "Не взял..."
     mt "Может и есть. {w}Посмотри в том шкафу."
     "Вожатая указала пальцем на большой гардероб позади меня."
-    mt "Там во втором ящике снизу лежат вещи забытые с предыдущих смен, в них посмотри."
-    ""
-
+    mt "Во втором ящике снизу."
+    mt "Да, да, в этом."
+    mt "Я туда кладу вещи которые ребята с предыдущих смен забывают."
+    "Среди вещей оказались невзрачные серые спортивные шорты."
+    "С виду они были маловаты, но выбирать не приходилось."
+    "Затем на дне нашлась салатовая футболка. {w}Приложив её к груди стало ясно что она тоже немного маловата."
+    dns "Ну вроде нашел но это всё мне наверное будет мелковато."
+    mt "Ну другого нет, бери это."
+    mt "А ну ка покажи. {w}Да нормально впринципе, разносишь."
+    dns "Ну ладно, спасибо."
+    mt "Да не за что."
     
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#НИЖЕ ПРЕДЫДУЩАЯ ВЕРСИЯ МОДА, ОТТУДА БЕРУ ОТРЫВКИ
     window hide
+    stop ambience fadeout 3
+    scene bg ext_house_of_mt_day with dissolve2
     play sound sfx_open_cabinet_1
-    play ambience ambience_day_countryside_ambience fadein 3
-    scene domext with dissolve2
-    pause (1)
-    play music music_list['everyday_theme'] fadein 3
-    scene bg ext_house_of_dv_day with dissolve2
+    play ambience_day_countryside_ambience fadein 2
     window show
-    
+
+    th "Вопрос с одеждой решён, осталось только переодеться."
+    "Домик вожатый был местом проходным, потому было бы глупо переодеваться где-то в кустах рядом с ним."
+    "Исходя из этого я направился в домик где меня разместили ''по приезде''."
+
+    window hide
+    pause (0.5)
+    scene bg ext_houses_day with dissolve
+    pause (0.5)
+    window show
+
+    th "Интересно где там мой сосед по домику?"
+    th "Живём вместе третий день, а я даже не запомнил как его зовут."
+    th "Андрей... Артём... Артур..."
+    th "Не-не-не, как-то иначе."
+
+    window hide
+    pause (0.5)
+    scene bg ext_square_day with dissolve
+    pause (0.5)
+    window show
+
+    th "Александр? Саша... Санька...{w}Нет, не то..."
+
+    window hide
+    pause (0.5)
+    scene domext with dissolve2
+    pause (0.5)
+    window show
+
+    th "Семён... Сеня... {w}Арсений! Точно, Арсений!"
+    "Вспоминая имя своего соседа я чуть не уткнулся носом в дверь своего домика."
     
     window hide
+    stop ambience fadeout 2
+    play sound sfx_open_cabinet_2
+    play ambience ambience_int_cabin_day fadein 2
+    scene dom with dissolve2
+    window show 
+
+    "Внутри было пусто."
+    "Лишь только пахло чем-то не совсем приятным, будто кто-то жёг траву или ставил благовонию."
+    "Я открыл окно чтобы развеять это всё."
+    "Затем быстро скинул с себя пионерскую форму и переоделся в добытую спортивную."
+    "Шорты немного жали в талии, а вот футболка пришлась по размеру."
+    th "Ну надеюсь растянутся."
+    "После пионерской формы с галстуками и ремнями переодевание в нормальную одежду ощущалось каким-то облегчением."
+    "Я ещё с детства терпеть не мог все эти формальности, или как это называла наша директриса ''Деловой стиль одежды''."
+    "Во первых этот стиль подразумевает многослойность рубашечка, пилетик, пиджачокю.{w} В школах и так душно, а надев всё это становилось просто невыносимо."
+    th "Про галстуки вообще молчу - адская удавка."
+    "Закончив с переодеванием я бросил вещи на кровать и собрался уходить."
+    "К этому времени запах в комнате немного развеялся и был не таким резким и не так давал в голову."
+    
+    window hide
+    stop ambience fadeout 2
+    play sound sfx_open_cabinet_1
+    play ambience ambience_forest_evening fadein 2
+    scene domext with dissolve2
     pause (1)
     scene bg ext_square_day with dissolve2
     pause (1)
@@ -379,36 +424,31 @@ label tft_1:
     pause (1)
     scene ext_storage_day with dissolve2
     pause (1)
-    play ambience ambience_forest_evening fadein 5
     scene bg ext_playground_day with dissolve2
     pause (1)
     window show
     
-    "Вскоре я вышел к спортивной площадке."
-    "С краю находился воллейбольный корт, где меня уже ждали."
+    "Вскоре я вышел к спортивной площадке, где с краю находился воллейбольный корт. {w}Там меня уже ждали."
     
     window hide
     scene ext_volley_court_7dl with dissolve2
     pause (0.5)
-    show dv normal sport flt  at left
+    show dv normal sport flt at left
     show us smile sport at right
     with dissolve
     window show
     
-    usp "Алиска, это он?"
-    dv "Да, Ульян."
-    us "Ну наконец-то! Почему так долго?"
-    dns "Извиняйте."
-    us "Ладно, проехали."
-    us "Ты играть хоть умеешь?"
-    dns "В волейбол то?"
-    us "Ага."
-    dns "Конечно умею!"
-    us "Ну тогда ладно."
-    dns "Как делиться будем?"
-    us "А зачем делиться? {w}Мы втроём против тех ребят."
+    us "Алиска, вон он!"
+    dv "Ну наконец-то! Почему так долго?"
+    dns "Спешил как мог."
+    dv "Ладно, проехали."
+    us "Ты играть то хоть умеешь?"
+    dns "Конечно умею! Если б не умел то отказался бы."
+    us "Хорошо. Как делиться будем? Чур я с Алиской!"
+    dv "А зачем делиться? {w}Мы втроём против тех ребят."
     "Она показала на пионеров, стоявших на другой стороне поля."
-    dns "Хорошо."
+    us "Ура!"
+    dns "Отлично."
     
     stop music fadeout 5
     
@@ -417,80 +457,60 @@ label tft_1:
     window hide
     pause (1)
     play music music_list['always_ready'] fadein 6
-    hide dv normal sport flt  at left
+    hide dv normal sport flt at left
     hide us smile sport at right
     with dissolve
     pause (1)
+    scene volleyball with dissolve2
     window show
     
-    "Игра началась."
     "Первыми подавали наши противники."
     
+    window hide
     play sound sfx_soccer_ball_kick
+    window show
     
-    "Удар. {w}Мяч летит Ульяне. {w}Она отбивает его, а Алиса запускает назад."
-    "Нам удаётся заработать очко."
+    "Удар. {w}Мяч летит Ульяне. {w}Она отбивает его, Алиса запускает назад."
+    "Наша команда зарабатывает очко."
     dns "Так держать!"
-    
-    show dv smile sport flt  at left
-    show us grin sport at right
-    with dissolve
-    
-    us "Смотри не профукай подачу."
-    dns "Наблюдай."
-    "Гордо сказал я."
+    "Следующим на подаче был я."
+    us "Смотри не профукай!"
+    dns "Не боись."
     
     window hide
-    hide dv smile sport flt  at left
-    hide us grin sport at right
-    with dissolve
-    pause (1)
-    window show
     play sound sfx_soccer_ball_kick
+    window show
     
-    "Затем взял мяч, отошёл назад, подкинул его и ударил сверху."
-    "Было бы комично, если бы сейчас ничего не получилось, но удача была на моей стороне."
-    "Мяч коснулся земли почти у края поля."
-    "Счёт стал {b}2:0."
+    "Я подкинул мяч и сильно ударил."
+    "Произошло всё так как я и хотел - мяч коснулся земли почти у края поля."
     "Противники вернули мяч."
-    "Я снова попытался дать подачу сверху."
-    
-    play sound sfx_soccer_ball_kick
-    
-    "Получилось криво. {w}Мяч даже не перелетел сетку."
+    "Теперь они ожидали сильную подачу и отошли к концу."
+    "Я же наоборот подавал снизу."
     
     window hide
-    show dv normal sport flt  at left
-    show us dontlike sport at right
-    with dissolve
+    play sound sfx_soccer_ball_kick
     window show
     
-    us "И что это было?"
-    "Недовольно произнесла Ульяна."
-    dv "Да чё ты, нормально же всё пока."
-    us "Это пока. {w}Противникам нельзя отдавать ни очка! Мне так Иван Анатольевич говорил!"
-    th "Надо исправлять положение."
+    "Мяч приземлился сразу за сеткой. {w}Наша команда зарабатывает третье очко." 
+    "Ещё удар. Мяч летит в центр, противники успевают отбить его."
+    "Алиса с Ульянкой расслабились, а я был далеко."
+    "Из команды противников на подачу встаёт..."
+    th "...Арсений!"
 
-    show us normal sport at right with dissolve
+    window hide
+    play sound sfx_soccer_ball_kick
+    window show
 
-    "Алиса отдала мяч противникам, и те приготовились подавать."
+    "Он ударяет, мяч летит в дальний левый угол."
+    "Я успеваю среагировать и отбиваю его. {w}Алиса накидывает Ульяне, та ударяет и мяч ложится за сеткой."
+    "Счёт {b}4:1."
     
     window hide
-    pause (1)
-    hide dv normal sport flt  at left
-    hide us dontlike sport at right
-    with dissolve
-    pause (1)
-    play sound sfx_soccer_ball_kick
-    
-    "Удар. Мяч летит в центр."
-    "Я отбиваю его, Алиса накидывает Ульяне."
-    "Та ударяет, и мяч ложится на вражеской половине."
-    "Счёт становится {b}3:1."
-    
+    scene ext_volley_court_7dl with dissolve2
     show dv grin sport flt at left
     show us grin sport at right
     with dissolve
+    window show
 
     dns "Классно сработали."
     dv "Да, все молодцы."
@@ -500,12 +520,10 @@ label tft_1:
     hide dv grin sport flt at left
     hide us grin sport at right
     with dissolve
-    scene volleyball with dissolve2
     pause (1)
     window show
     
     "Следующие полтора часа мы провели за игрой."
-    "Наша команда работала быстро и слаженно. Будто мы играем не первый раз. Хотя на деле едва знакомы."
     
     window hide
     pause (1)
@@ -531,6 +549,7 @@ label tft_1:
     pause (1)
     window show
     
+    "Наша команда работала быстро и слаженно, будто мы играем не первый раз. Хотя на деле едва знакомы."
     "Но всё хорошее имеет свойство кончаться."
     
     window hide
@@ -539,92 +558,59 @@ label tft_1:
     with dissolve
     window show
     
-    "Спустя час игра закончилась. Все начали расходиться."
     "Ульяна сказала что пропустит ужин и убежала играть в футбол."
     
     window hide
-    hide us smile sport at right
-    hide dv smile sport flt at left
-    with dissolve
+    show us smile sport at right:
+        linear 0.5 xalign -1.0
     show dv smile sport flt with dissolve
     stop music fadeout 3
     window show
     
-    "Ребята, против которых мы играли, пошли по своим делам."
-    "А {i}мы{/i} с Алисой пошли в домики."
+    "Ребята, против которых мы играли и Алиса разошлись пошли по своим делам."
+
+    window hide
+    show dv smile sport flt:
+        linear 1.5 xalign -1.0
+    window show
+    
+    "А мы с Арсением пошли в домик."
     "Попутно обсуждая только что окончившийся матч."
     
     window hide
-    hide dv smile sport flt  with dissolve
-    pause (0.3)
     scene bg ext_dining_hall_away_sunset with dissolve2
     pause (1)
     scene bg ext_square_sunset with dissolve2
     pause (0.5)
-    show dv smile sport flt  with dissolve
+    show ars_smile with dissolve
     window show
     
-    dv "Классно поиграли."
-    dns "Да, мне тоже понравилось."
-    
-    hide dv smile sport flt 
-    show dv grin sport flt with dissolve
-    
-    dv "Знаешь, я сначала думала ты откажешься или скажешь, что играть не умеешь."
-    dv "А оказалось что ты даже неплохо играешь."
-    dns "Вот видишь, не прогадала ты с тем, кого звать."
-    dv "Ага."
-    dns "Приглашай ещё. От игры на свежем воздухе грех отказываться."
-    th "Тем более в компании красивой девушки."
-    dv "Буду знать что ты не против поиграть."
-    
-    hide dv grin sport flt dspr
-    show dv smile sport flt  with dissolve
-    
-    "Хоть она и девочка, разговор с ней шёл легко."
-    "Возможно это окружающая среда и смена обстановки так повлияли на моё поведение. {w}А возможно {i}что-то другое."
-    
+    ars "Круто ты кстати ту мою первую подачу отбил."
+    dns "Да оно случайно вышло, а так спасибо."
+    ars "Слушай, а как ты в команду к Двачевской то попал?"
+
     window hide
-    hide dv smile sport flt  with dissolve
-    pause (0.5)
+    pause (1)
+    scene bg ext_square_sunset with dissolve2
+    pause (1)
+    window show
+
+    dns "А что в этом такого?"
+    ars "Она же фиг кого подпустит к себе."
+    dns "Ну вообще меня Ульяна позвала когда я в столовой сидел..."
+    ars "Хм... Ну тогда не знаю даже. {w}Может им реально больше некого было взять."
+    dns "Возможно."
+
+    window hide
+    pause (1)
     scene bg ext_houses_sunset with dissolve2
     pause (1)
-    scene dvhousesunset with dissolve2
     window show
-     
-    "Проходя мимо домика с флагом на стекле, Алиса вдруг остановилась."
-    
-    show dv normal sport flt  with dissolve
-    
-    dv "Пришли. Я тут живу."
-    dns "Прикольно окно украсили. Я оценил когда мимо шёл."
-    
-    hide dv normal sport flt 
-    show dv grin sport flt with dissolve
-    
-    dv "Мы с Ульяной старались."
-    dns "Выглядит и правда круто. {w}А вы вместе живёте?"
-    dv "Да, а что?"
-    dns "А сколько ей лет? Выглядит она младше тебя."
-    dv "Четырнадцать."
-    dv "Ей скучно с ровесниками, поэтому её в старший отряд перевели."
-    dns "Понял."
-    
-    hide dv grin sport flt
-    show dv smile sport flt with dissolve
-    
-    dv "Ладно, ещё увидимся."
-    dns "Давай."
-    
-    window hide
-    play sound sfx_open_cabinet_2 
-    pause (1)
-    hide dv smile sport flt with dissolve
-    window show
-    
-    "Она скрылась за дверью."
-    "Я проводил её взглядом и пошёл к себе."
-    
+
+    ars "А ты чего кстати такой тучный первый пару дней был?"
+    dns "Да так, ситуация в жизни неприятная случилась."
+    ars"Ну тогда ладно, не буду лезть не в своё дело."
+
     window hide
     scene domexteven with dissolve2
     pause (0.8)
@@ -635,18 +621,25 @@ label tft_1:
     pause (0.3)
     window show
     
-    "Зайдя в домик, плюхнулся на кровать."
+    "Зайдя в домик, мы оба плюхнулись каждый на свою кровать."
+
     play sound fall_bed
-    "Затем по привычке достал телефон."
-    "Остановил меня значёк отсутствия сети в правом верхнем углу экрана."
-    th "Ах, совсем забыл! Я же хер пойми где, и не знаю как сюда попал."
-    "Зато мне удалось узнать время - {b}18:22"
+
+    "Я взглянул на часы. {w}Была половина седьмого."
     "После игры я довольно вымотался. {w}Поэтому решил передохнуть, и закрыл глаза."
+    "Арсений понял мои намерения и не стал меня тревожить."
     
     window hide
     scene anim prolog_1 with dissolve2
     window show
-    
+
+
+
+
+
+
+   
+#НИЖЕ ПРЕДЫДУЩАЯ ВЕРСИЯ МОДА, ОТТУДА БЕРУ ОТРЫВКИ
     "Впервые за день я наконец остался один на один с самим собой."
     "Мысли о попадании в лагерь ударили в голову."
     th "Что же это за место такое?"
