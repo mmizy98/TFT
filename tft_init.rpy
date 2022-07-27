@@ -527,12 +527,12 @@ init:
 
     screen tft_menu: 
             imagebutton:
-                xalign 0.05 yalign 0.10
+                xalign 0.95 yalign 0.90
                 auto "mods/TFT/image/menu/tft_start_%s.png"
                 action Jump ("tft_prolog")
 
             imagebutton:
-                xalign 0.05 yalign 0.30
+                xalign 0.50 yalign 0.90
                 auto "mods/TFT/image/menu/tft_tracklist_%s.png"
                 action Jump ("tft_menu_tracklist")
 
