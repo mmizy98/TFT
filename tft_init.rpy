@@ -5,12 +5,25 @@ init -99 python:
       "persistent.sprite_time=='sunset'", im.MatrixColor(FilePath, im.matrix.tint(0.94, 0.82, 1.0)),
       "persistent.sprite_time=='night'", im.MatrixColor(FilePath, im.matrix.tint(0.63, 0.78, 0.82)))
 
+    
+    def getRandomItem(items):
+        num = renpy.random.randint(0, len(items)-1)
+        return items[num]
+
+    def getRandomButton():
+        return getRandomItem(['1','2','3','4','5','6','7','8','9','0','z','x','c','j','i','o','b','t','h'])
+
 init:
     define config.developer = True
     $ mods["tft_menu_main"]=u"Cудьбы Двух"
 
     $ day1_vzlom = False
     $ day0_drunk =  False
+    $ qte_loose = False
+    $ qte_count = 0
+    
+
+
 
 # Transforms:
 
@@ -128,6 +141,16 @@ init:
     
 # Pictures:
     
+    #qte:
+    image qte_anim_button:
+        getFile("image/screens/qte/press_button1.png")
+        0.1
+        getFile("image/screens/qte/press_button2.png")
+        0.1
+        getFile("image/screens/qte/press_button3.png")
+        0.1
+        repeat
+
     # Alisa pics:
     image dvfire = "mods/TFT/image/cg/dvfire.jpg"
 
@@ -520,10 +543,10 @@ init:
     image chair2 = getSprite("mods/TFT/image/sprites/misc/chair2.png")
 
     # 2 hours
-    image aftertwohour = getSprite("mods/TFT/image/sprites/misc/aftertwohour.png")
+    image aftertwohour = getSprite("mods/TFT/image/screens/aftertwohour.png")
     
     # days
-    image day3 = getSprite("mods/TFT/image/sprites/misc/day3.png")
+    image day3 = getSprite("mods/TFT/image/screens/day3.png")
 
     screen tft_menu: 
         imagebutton:
