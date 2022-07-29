@@ -1,4 +1,4 @@
-label estr_TFOT2:
+label tft_day2:
 
     $ backdrop = "day"
     $ new_chapter(2, u"Судьбы двух. День 2")

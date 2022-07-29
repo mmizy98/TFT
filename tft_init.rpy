@@ -11,7 +11,7 @@ init -99 python:
         return items[num]
 
     def getRandomButton():
-        return getRandomItem(['1','2','3','4','5','6','7','8','9','0','z','x','c','j','i','o','b','t','h'])
+        return getRandomItem(['1','2','3','4','5','6','7','8','9','z','x','c','j','i','b','t','h'])
 
 init:
     define config.developer = True
@@ -48,6 +48,12 @@ init:
 
     # Denis:
     $ dns = Character (u'Денис', color = "#a7c575", what_color = "E2C778")
+
+    # Arseniy:
+    $ ars = Character (u'Арсений', color = "#de6868", what_color = "E2C778")
+
+    # Фанат
+    $ fan = Character (u'Поклонник', color = "#7e79b5", what_color = "E2C778")
   
     # Cook:
     $ pvr = Character (u'Повар', color = "#4170fd", what_color = "E2C778")
@@ -56,13 +62,17 @@ init:
     # Музыканты
     $ muz = Character (u'Музыкант', color = "#440475", what_color = "E2C778")
     $ muzs = Character (u'Музыканты', color = "#440475", what_color = "E2C778")
-
-    # Фанат
-    $ fan = Character (u'Поклонник', color = "#7e79b5", what_color = "E2C778")
     
 # Sounds:
 
     # Music:
+
+    $ roxette = "mods/TFT/image/sound/music/roxette.mp3"
+
+    $ your_nobility = "mods/TFT/image/sound/music/your_nobility.mp3"
+
+    $ GS_Chasing_a_Rumor = "mods/TFT/image/sound/music/GS_Chasing_a_Rumor.mp3"
+
     $ greenday = "mods/TFT/image/sound/music/greenday.mp3"
 
     $ hyperborea = "mods/TFT/image/sound/music/hyperborea.mp3"
@@ -213,11 +223,7 @@ init:
     # Other:
     image food_breakfast = "mods/TFT/image/cg/food_breakfast.png"
 
-    image white_screen = "mods/TFT/image/sprites/misc/white_screen.png"
-
-    image flt_timeskip_logo1 = "mods/TFT/image/sprites/misc/flt_timeskip_logo1.png"
-
-    image flt_timeskip_logo2 = "mods/TFT/image/sprites/misc/flt_timeskip_logo2.png"
+    image white_screen = "mods/TFT/image/screens/white_screen.png"
     
     image volleyball = "mods/TFT/image/cg/volleyball.png"
 
@@ -496,24 +502,24 @@ init:
     image dv rage pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/pioneer2_dv_rage.png")
     image dv normal pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/pioneer2_dv_normal.png")
 
-    # Denis pioneer:
-    image dns_angry = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_angry.png")
-    image dns_angry2 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_angry2.png")
-    image dns_normal = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_normal.png")
-    image dns_normal2 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_normal2.png")
-    image dns_smile = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_smile.png")
-    image dns_smile2 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_smile2.png")
-    image dns_smile3 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_smile3.png")
-    image dns_smile4 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_smile4.png")
-    image dns_surprise = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_surprise.png")
-    image dns_surprise2 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_surprise2.png")
-    image dns_think = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_think.png")
-    image dns_think2 = getSprite("mods/TFT/image/sprites/dns/pioneer/dns_think2.png")
+    # Arseniy pioneer:
+    image ars_angry = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_angry.png")
+    image ars_angry2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_angry2.png")
+    image ars_normal = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_normal.png")
+    image ars_normal2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_normal2.png")
+    image ars_smile = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_smile.png")
+    image ars_smile2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_smile2.png")
+    image ars_smile3 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_smile3.png")
+    image ars_smile4 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_smile4.png")
+    image ars_surprise = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_surprise.png")
+    image ars_surprise2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_surprise2.png")
+    image ars_think = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_think.png")
+    image ars_think2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_think2.png")
     
-    # Denis coat:
-    image coat_dns_angry = getSprite("mods/TFT/image/sprites/dns/coat/coat_dns_angry.png")
-    image coat_dns_normal = getSprite("mods/TFT/image/sprites/dns/coat/coat_dns_normal.png")
-    image coat_dns_smile = getSprite("mods/TFT/image/sprites/dns/coat/coat_dns_smile.png")
+    # Arseniy coat:
+    image coat_ars_angry = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_angry.png")
+    image coat_ars_normal = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_normal.png")
+    image coat_ars_smile = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_smile.png")
     
     # Alisa coat:
     image coat_dv_normal = getSprite("mods/TFT/image/sprites/dv/normal/coat/coat_dv_normal.png")
