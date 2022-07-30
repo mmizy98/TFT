@@ -11,7 +11,7 @@ init -99 python:
         return items[num]
 
     def getRandomButton():
-        return getRandomItem(['1','2','3','4','5','6','7','8','9','z','x','c','j','i','b','t','h'])
+        return getRandomItem(['w','a','d','e','r','f','c','g'])
 
 init:
     define config.developer = True
@@ -21,9 +21,6 @@ init:
     $ day0_drunk =  False
     $ qte_loose = False
     $ qte_count = 0
-    
-
-
 
 # Transforms:
 
@@ -150,16 +147,6 @@ init:
 
     
 # Pictures:
-    
-    #qte:
-    image qte_anim_button:
-        getFile("image/screens/qte/press_button1.png")
-        0.1
-        getFile("image/screens/qte/press_button2.png")
-        0.1
-        getFile("image/screens/qte/press_button3.png")
-        0.1
-        repeat
 
     # Alisa pics:
     image dvfire = "mods/TFT/image/cg/dvfire.jpg"
@@ -223,8 +210,6 @@ init:
     # Other:
     image food_breakfast = "mods/TFT/image/cg/food_breakfast.png"
 
-    image white_screen = "mods/TFT/image/screens/white_screen.png"
-    
     image volleyball = "mods/TFT/image/cg/volleyball.png"
 
     image semsquore = "mods/TFT/image/cg/semsquore.jpg"
@@ -548,31 +533,38 @@ init:
     image chair = getSprite("mods/TFT/image/sprites/misc/chair.png")
     image chair2 = getSprite("mods/TFT/image/sprites/misc/chair2.png")
 
-    # 2 hours
-    image aftertwohour = getSprite("mods/TFT/image/screens/aftertwohour.png")
-    
-    # days
-    image day3 = getSprite("mods/TFT/image/screens/day3.png")
+    # other
+    image aftertwohour = getSprite("mods/TFT/image/screens/other/aftertwohour.png")
+    image day3 = getSprite("mods/TFT/image/screens/other/day3.png")
+    image white_screen = "mods/TFT/image/screens/white_screen.png"
+
+    #qte:
+    image qte_anim_button:
+        getFile("mods/TFT/image/screens/qte_buttons/qte_button1.png")
+        0.2
+        getFile("mods/TFT/image/screens/qte_buttons/qte_button2.png")
+        0.2
+        repeat
 
     screen tft_menu: 
         imagebutton:
             xalign 0.95 yalign 0.90
-            auto "mods/TFT/image/screens/tft_start_%s.png"
+            auto "mods/TFT/image/screens/menu/tft_start_%s.png"
             action Jump ("tft_prolog")
 
         imagebutton:
             xalign 0.50 yalign 0.90
-            auto "mods/TFT/image/screens/tft_tracklist_%s.png"
+            auto "mods/TFT/image/screens/menu/tft_tracklist_%s.png"
             action Jump ("tft_menu_tracklist")
 
         imagebutton:
             xalign 0.05 yalign 0.90
-            auto "mods/TFT/image/screens/tft_exit_%s.png"
+            auto "mods/TFT/image/screens/menu/tft_exit_%s.png"
             action Jump ("tft_menu_exit")
 
     screen tft_tracklist:
         imagebutton:
             xalign 0.05 yalign 0.90
-            auto "mods/TFT/image/screens/tft_back_%s.png"
+            auto "mods/TFT/image/screens/menu/tft_back_%s.png"
             action Jump ("tft_menu_plus")
 

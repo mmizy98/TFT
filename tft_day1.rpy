@@ -1,4 +1,4 @@
-label tft_1:
+label tft_day1:
 
     window hide
     $ backdrop = "days"
