@@ -6,12 +6,12 @@ init -99 python:
       "persistent.sprite_time=='night'", im.MatrixColor(FilePath, im.matrix.tint(0.63, 0.78, 0.82)))
 
     
-    def getRandomItem(items):
+    def TFTgetRandomItem(items):
         num = renpy.random.randint(0, len(items)-1)
         return items[num]
 
-    def getRandomButton():
-        return getRandomItem(['w','a','d','e','r','f','c','g'])
+    def TFTgetRandomButton():
+        return TFTgetRandomItem(['w','a','d','e','r','f','c','g'])
 
 init:
     define config.developer = True
@@ -19,8 +19,8 @@ init:
 
     $ day1_vzlom = False
     $ day0_drunk =  False
-    $ qte_loose = False
-    $ qte_count = 0
+    $ tft_qte_loose = False
+    $ tft_qte_count = 0
 
 # Transforms:
 
@@ -40,22 +40,38 @@ init:
         linear 0.08 pos (0, 0)
         linear 0.08 pos (7, 0)
         linear 0.08 pos (0, 0)
+
+    transform appdouble(imgn, z=1.1, zt=1.0, t=1.0):
+        contains:
+            ImageReference(imgn)
+            truecenter
+            linear zt zoom z
+        contains:
+            ImageReference(imgn)
+            truecenter
+            zoom z
+            alpha 0.0
+            pause zt
+            linear t xpos 0.48 alpha 0.3 zoom (z + 0.05)
+        contains:
+            ImageReference(imgn)
+            truecenter
+            zoom z
+            alpha 0.0
+            pause zt
+            linear t xpos 0.51 alpha 0.2 zoom (z + 0.05)
         
 # Characters:
 
     # Denis:
     $ dns = Character (u'Денис', color = "#a7c575", what_color = "E2C778")
-
     # Arseniy:
     $ ars = Character (u'Арсений', color = "#de6868", what_color = "E2C778")
-
     # Фанат
     $ fan = Character (u'Поклонник', color = "#7e79b5", what_color = "E2C778")
-  
     # Cook:
     $ pvr = Character (u'Повар', color = "#4170fd", what_color = "E2C778")
     $ mar = Character (u'Мария', color = "#4170fd", what_color = "E2C778")
-
     # Музыканты
     $ muz = Character (u'Музыкант', color = "#440475", what_color = "E2C778")
     $ muzs = Character (u'Музыканты', color = "#440475", what_color = "E2C778")
@@ -149,6 +165,8 @@ init:
 # Pictures:
 
     # Alisa pics:
+    image aliceroof = "mods/TFT/image/cg/aliceroof.jpg"
+
     image dvfire = "mods/TFT/image/cg/dvfire.jpg"
 
     image dv_polyana2 = "mods/TFT/image/cg/dv_polyana2.jpeg"
@@ -312,6 +330,9 @@ init:
     image podzd = "mods/TFT/image/bg/podzd.jpg"
     
     # Camp:
+
+    image menu_fone = "mods/TFT/image/bg/menu_fone.jpg"
+
     image ext_music_club_verandah_day = "mods/TFT/image/bg/ext_music_club_verandah_day.jpg"
 
     image ext_admins_night_7dl = "mods/TFT/image/bg/ext_admins_night_7dl.jpg"
@@ -536,10 +557,10 @@ init:
     # other
     image aftertwohour = getSprite("mods/TFT/image/screens/other/aftertwohour.png")
     image day3 = getSprite("mods/TFT/image/screens/other/day3.png")
-    image white_screen = "mods/TFT/image/screens/white_screen.png"
+    image white_screen = getSprite("mods/TFT/image/screens/white_screen.png")
 
     #qte:
-    image qte_anim_button:
+    image tft_qte_anim_button:
         getFile("mods/TFT/image/screens/qte_buttons/qte_button1.png")
         0.2
         getFile("mods/TFT/image/screens/qte_buttons/qte_button2.png")

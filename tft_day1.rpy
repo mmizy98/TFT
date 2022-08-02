@@ -2,7 +2,7 @@ label tft_day1:
 
     window hide
     $ backdrop = "days"
-    $ new_chapter(1, u"Искра. День 3")
+    $ new_chapter(1, u"Судьбы двух. День 3")
     scene black with dissolve2
     $ day_time()
     play ambience ambience_ext_road_day fadein 2
@@ -489,7 +489,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call qte_label(1,60)
+    call tft_qte_label(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -502,7 +502,7 @@ label tft_day1:
     
     window hide
     pause (1)
-    call qte_label(1,60)
+    call tft_qte_label(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -512,7 +512,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call qte_label(1,60)
+    call tft_qte_label(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -532,7 +532,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call qte_label(1,60)
+    call tft_qte_label(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
