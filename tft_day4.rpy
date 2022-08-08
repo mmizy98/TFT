@@ -203,11 +203,6 @@ label tft_day2:
 
     "Ольга развернулась и пошла с остальными на площадку."
     "Мы начали расходиться, но вдруг кто-то из толпы сказал:"
-
-    window hide
-    show pi normal at left with dissolve
-    window show
-
     pi "Сто процентов Двачевская опять."
 
     window hide
@@ -216,19 +211,12 @@ label tft_day2:
 
     dv "Слышь! Щас договоришься!"
 
-
-
-
-
-
-
-
     window hide
     pause (1)
     scene bg ext_houses_day with dissolve
     window show
     
-    "Но по пути кто-то легонько толкнул меня в плечо."
+    "По пути кто-то легонько толкнул меня в плечо."
     "Я обернулся."
 
     show dv normal sport flt with dissolve

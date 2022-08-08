@@ -1,17 +1,16 @@
 init -99 python:
-  def getSprite(FilePath):
-    return ConditionSwitch(
-      "persistent.sprite_time=='day'", im.MatrixColor( FilePath, im.matrix.tint(0.83, 0.88, 0.92)),
-      "persistent.sprite_time=='sunset'", im.MatrixColor(FilePath, im.matrix.tint(0.94, 0.82, 1.0)),
-      "persistent.sprite_time=='night'", im.MatrixColor(FilePath, im.matrix.tint(0.63, 0.78, 0.82)))
+    def getSprite(FilePath):
+        return ConditionSwitch(
+            "persistent.sprite_time=='day'", im.MatrixColor( FilePath, im.matrix.tint(0.83, 0.88, 0.92)),
+            "persistent.sprite_time=='sunset'", im.MatrixColor(FilePath, im.matrix.tint(0.94, 0.82, 1.0)),
+            "persistent.sprite_time=='night'", im.MatrixColor(FilePath, im.matrix.tint(0.63, 0.78, 0.82)))
 
     
     def TFTgetRandomItem(items):
         num = renpy.random.randint(0, len(items)-1)
-        return items[num]
-
+        return items[num]  
     def TFTgetRandomButton():
-        return TFTgetRandomItem(['w','a','d','e','r','f','c','g'])
+        return TFTgetRandomItem(['W','A','D','E','R','F','C','G'])
 
 init:
     define config.developer = True
@@ -561,9 +560,9 @@ init:
 
     #qte:
     image tft_qte_anim_button:
-        getFile("mods/TFT/image/screens/qte_buttons/qte_button1.png")
+        "mods/TFT/image/screens/qte_buttons/qte_button1.png"
         0.2
-        getFile("mods/TFT/image/screens/qte_buttons/qte_button2.png")
+        "mods/TFT/image/screens/qte_buttons/qte_button2.png"
         0.2
         repeat
 
