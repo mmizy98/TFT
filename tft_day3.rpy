@@ -2,7 +2,7 @@ label tft_day1:
 
     window hide
     $ backdrop = "days"
-    $ new_chapter(1, u"Судьбы двух. День 3")
+    $ new_chapter(3, u"Судьбы двух. День 3")
     scene black with dissolve2
     $ day_time()
     play ambience ambience_ext_road_day fadein 2
@@ -90,7 +90,8 @@ label tft_day1:
 
     show dv normal pioneer2 flt with dissolve
 
-    dv "Мор. {w=0.5}Не проси, не дам, у меня и так мало осталось."
+    dv "Мор."
+    dv "Не проси, не дам, у меня и так мало осталось."
     th "По рассказам родственников, в СССР ''More'' был не менее желанным чем ''Malboro'', но курили его в основном девушки."
     th "Впринципе неудивительно что Алиса курит именно их."
     dns "Да я не курю."
@@ -358,7 +359,13 @@ label tft_day1:
 
     mt "Ну другого нет, бери это."
     mt "А покажи ка. {w}Да нормально впринципе, разносишь."
-    dns "Ну ладно, спасибо."
+    dns "Ну ладно."
+    mt "А плавки у тебя есть?"
+    dns "Тоже нет."
+    mt "В ящике повыше возьми, там на самом верху лежат."
+    "Я открыл указанный ящик."
+    "Внутри лежала стопка нижнего белья, мужского и женского. Сверху и правда лежали черные плавки."
+    dns "Спасибо!"
     mt "Да не за что."
     
     window hide
@@ -369,7 +376,7 @@ label tft_day1:
     window show
 
     th "Вопрос с одеждой решён, осталось только переодеться."
-    "Жилище вожатой было местом проходным, потому было бы глупо переодеваться где-то рядом в кустах."
+    "Жилище вожатой было местом проходным, да ещё и плавки надо занести."
     "Исходя из этого я направился в домик где меня разместили ''по приезде''."
 
     window hide
@@ -411,7 +418,7 @@ label tft_day1:
     "Внутри было пусто."
     "Лишь только пахло чем-то не совсем приятным, будто кто-то жёг сухие листья или ставил благовонию."
     "Я открыл окно чтобы развеять это всё."
-    "Затем быстро скинул с себя пионерскую форму и переоделся в добытую спортивную."
+    "Затем бросил шорты в свою сумку, быстро скинул с себя пионерскую форму и переоделся в добытую спортивную."
     "Шорты немного жали в талии, а вот футболка пришлась по размеру."
     th "Ну надеюсь растянутся."
     "После пионерской формы с галстуками и ремнями переодевание в нормальную одежду ощущалось каким-то облегчением."
@@ -489,7 +496,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call tft_qte_label(1,60)
+    call tft_qte_green_start(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -502,7 +509,7 @@ label tft_day1:
     
     window hide
     pause (1)
-    call tft_qte_label(1,60)
+    call tft_qte_green_start(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -512,7 +519,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call tft_qte_label(1,60)
+    call tft_qte_green_start(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -532,7 +539,7 @@ label tft_day1:
 
     window hide
     pause (1)
-    call tft_qte_label(1,60)
+    call tft_qte_green_start(1,60)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -771,7 +778,7 @@ label tft_day1:
 
     window hide    
     pause (0.6)
-    show dv normal pioneer with dissolve
+    show dv normal pioneer flt with dissolve
     window show
 
     "Взломщиком оказалась Алиса."
@@ -780,7 +787,7 @@ label tft_day1:
     
     stop sound_loop
     window hide
-    hide dv normal pioneer with dissolve
+    hide dv normal pioneer flt with dissolve
     show dv scared1 pioneer flt with dissolve
     window show
 
@@ -788,14 +795,14 @@ label tft_day1:
 
     window hide
     hide dv scared1 pioneer flt
-    show dv angry pioneer with dissolve
+    show dv angry pioneer flt with dissolve
     window show
     
     dv "Опять ты?!"
     "Но потом вернулась в своё обычное состояние."
     dns "Ты чего тут делаешь?"
     
-    show dv normal pioneer with dissolve
+    show dv normal pioneer flt with dissolve
     
     dv "А что, не понятно?"
     dns "Да не особо."
@@ -807,7 +814,7 @@ label tft_day1:
     dns "Ну показывай."
 
     window hide
-    show dv normal pioneer:
+    show dv normal pioneer flt:
         linear 0.5 xalign 0.75
     pause (0.6)
     window show
@@ -822,7 +829,7 @@ label tft_day1:
     "Двери столовой были сделаны из дерева и имели небольшие окошки. {w}Появилась идея."
     "Я вернул Алисе отмычку."
     
-    show dv surprise pioneer with dissolve
+    show dv surprise pioneer flt with dissolve
     
     dv "И как ты её голыми руками собрался открыть?"
     "Недоумевающе спросила она."
@@ -831,7 +838,7 @@ label tft_day1:
     dns "Ну я всё-равно попробую."
     
     pause (0.7)
-    show dv normal pioneer with dissolve
+    show dv normal pioneer flt with dissolve
     
     "Я приложил ладонь к стеклу и начал давить в сторону."
     
@@ -881,7 +888,7 @@ label tft_day1:
     
     window hide
     show chair with dissolve
-    show dv smile pioneer close with dissolve
+    show dv smile pioneer flt close with dissolve
     window show
     
     "Алиса поставила еду на стол и села рядом."
@@ -910,7 +917,7 @@ label tft_day1:
     window hide
     scene bg int_dining_hall_night with dissolve2
     show chair with dissolve
-    show dv smile pioneer close with dissolve
+    show dv smile pioneer flt close with dissolve
     window show
     
     "Как продолжать диалог я не знал, но за меня это сделала Алиса."
@@ -940,7 +947,7 @@ label tft_day1:
     voice "Почему окно открыто?"
 
     window hide
-    hide dv smile pioneer close with dissolve
+    hide dv smile pioneer flt close with dissolve
     show dv surprise2 pioneer close flt with dissolve
     window show
 
@@ -971,7 +978,7 @@ label tft_day1:
     
     window show
     stop music fadeout 4
-    show dv normal pioneer with dissolve
+    show dv normal pioneer flt with dissolve
     window show
     
     "Мы выбрались из своих укрытий."
@@ -999,7 +1006,7 @@ label tft_day1:
     "Меня окутал приятный ночной бриз."
     "В столовой было довольно душно. Облакотившись на окно, я принялся полной грудью вдыхать свежий воздух."
     
-    show dv smile pioneer with dissolve
+    show dv smile pioneer flt with dissolve
     
     "Через минуту подошла Алиса, державшая в одной руке бумажный пакет, куда положила еду, а другой протягивала мне булочку."
     dv "Держи, в домике съешь."
@@ -1025,7 +1032,7 @@ label tft_day1:
     pause (1)
     scene bg ext_house_of_dv_night with dissolve2
     pause (1)
-    show dv smile pioneer with dissolve
+    show dv smile pioneer flt with dissolve
     window show
     
     "Мы остановились возле домика, находящегося неподалёку от моего."
@@ -1033,8 +1040,9 @@ label tft_day1:
     dns "Спокойной ночи."
     
     window hide
-    hide dv smile pioneer with dspr
-    show dv grin pioneer flt with dissolve
+    hide dv smile pioneer flt
+    show dv grin pioneer flt
+    with dissolve
     window show
     
     dv "И тебе."
@@ -1078,6 +1086,7 @@ label tft_day1:
     
     window hide
     stop music fadeout 5
+    stop ambience fadeout 5
     scene black with Dissolve(5)
     pause (1)
     jump tft_day2

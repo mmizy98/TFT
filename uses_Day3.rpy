@@ -1,99 +1,7 @@
-    #ЭТО ТЕ ОТРЫВКИ ПППРЕДЫДУЩЕЙ ВЕРСИИ КОТОРЫЕ 100% НАДО ЮЗАТЬ
+    #ЭТО ТЕ ОТРЫВКИ ПРЕДЫДУЩЕЙ ВЕРСИИ КОТОРЫЕ 100% НАДО ЮЗАТЬ
     
     
-    "Я открыл дверь и зашёл внутрь."
-    "Алиса зашла следом."
-    
-    window hide
-    scene int_warehouse_day2 with dissolve2
-    window show 
-
-    "Внутри оказалось много стеллажей с одеждой."
-    "Посреди комнаты стояла гладильная доска, а в углу швейная машинка."
-    th "Довольно цивильно."
-
-    show dv smile pioneer2 with dissolve
-
-    dv "Ты размер то свой знаешь?"
-    th "Благодаря консультантке из магазина одежды - знаю."
-    dns "Да, конечно."
-    dns "А что мне конкретно нужно?"
-
-    hide dv smile pioneer2 with dissolve
-    show dv surprise pioneer2 with dissolve
-
-    dv "Рубашка, шорты... {w}ремень и галстук наверное..."
-    dns "Спасибо."
-
-    window hide
-    hide dv surprise pioneer2 with dissolve
-    show dv normal pioneer2 with dissolve
-    play sound storagenoise
-    pause (3)
-    window show
-
-    "Искать долго не пришлось."
-    dns "Вроде всё."
-    dv "Угу."
-
-    window hide
-    play sound saray
-    scene ext_storage_day with dissolve2
-    play ambience ambience_day_countryside_ambience fadein 3
-    play sound sfx_keys_rattle
-    window show
-
-    "Я вернул Алисе ключи."
-
-    show dv smile pioneer2 with dissolve
-
-    dv "Ладно, я пошла."
-
-    th "Ладно, как говорил один мой знакомый: «Если тебя уже насилуют, то тебе остается только стонать.»."
-
-    "Оторвавшись от зеркала, я начал разбирать свою сумку."
-    th "Смысла перекладывать вещи в шкаф нет, их у меня не так уж и много."
-    th "Только вот бутылку надо на дно засунуть. {w}Не знаю зачем... {w}На всякий случай."
-    
-    play sound jimbeam
-    
-    "Переложив бутылку в самый низ и прикрыв её одеждой я довольно отряхнул руки."
-    th "Отлично, чем бы теперь заняться?"
-    
-    window hide
-    play sound sfx_open_cabinet_1
-    scene domext with dissolve2
-    play ambience ambience_day_countryside_ambience
-    pause (1.5)
-    play sound sfx_dinner_jingle_normal
-    window show
-    
-    th "Интересно тут конечно."
-    th "Хотя кому не было бы интересно в другой реальности или осознанном сне, где можно почувствовать и потрогать окружение."
-    
-    show mz normal glasses pioneer far with dissolve
-    
-    "Лавочки перед входом были заняты какой-то пионеркой в очках."
-    "Выглядела она не добро, поэтому я не решил садиться рядом. Вместо этого отправился на площадь, где тоже можно было посидеть."
-
-    "По пути назад моё внимание привлекло окно одного из домиков."
-    "Оно было занавешено флагом, с изображённым на нём весёлым роджером."
-    th "Прикольно."
-
-    $ persistent.sprite_time = "night"
-    dns "И чем ты собралась её открывать?"
-    "Она отошла от двери на шаг и продемонстрировала мне отмычку, торчавшую из замка."
-    dv "Вот."
-    "Я вытащил её и осмотрел. {w}Сделана она была из заколки."
-    dns "Мда, с таким инструментом мы тут до утра провозимся."
-    
-    show dv angry pioneer with dissolve
-    
-    dv "У тебя есть другие идеи?"
-    dns "Есть. {w}Я с собой булочки привёз, можем ко мне пойти, я тебя угощу."
-    
-    show dv normal pioneer with dissolve
-    
+ 
     "Она немного подумала, и согласилась."
     dv "Ладно, пойдём."
     
@@ -289,81 +197,7 @@
     play ambience ambience_forest_night fadein 3
     window show
 
-    "Не зная где находится туалет, я как можно быстрее зашагал в сторону площади в надежде найти его самому."
 
-    window hide
-    pause (1)
-    scene bg ext_house_of_dv_night with dissolve2
-    pause (1)
-    scene bg ext_square_night with dissolve2
-    pause (1)
-    show sl serious pioneer with dissolve
-    window show
-
-    "Моим спасением оказалась Славя, направляющаяся в ту сторону, откуда я пришёл."
-    sl "Денис, ты чего не в домике? Отбой уже был."
-    dns "Да-да привет. {w=0.25}Где здесь туалет?"
-    show sl normal pioneer with dissolv
-    sl "А тебе зачем?"
-    dns "Угадай."
-    show sl smile2 pioneer with dissolv
-    sl "Ой, прости."
-    sl "А я вот обход ночной делаю. Проверяю все ли спят."
-    th "Она прикалывается?"
-    dns "Славя!"
-    show sl laugh pioneer with dissolve
-
-    sl "Ладно, прости, не смогла удержаться."
-
-    show sl smile2 pioneer with dissolve
-
-    sl "Вон там медпункт, а за ним туалет."
-    "Она показала куда-то в сторону. {w}Я быстро зашагал в указанном направлении."
-
-    hide sl with dissolve
-
-    "Славя осталась на месте."
-    sl "Спокойной ночи!"
-    "Послышалось из-за спины."
-    dns "Угу."
-    "Хмыкнул я себе под нос."
-
-    window hide
-    pause (1)
-    scene bg ext_houses_night with dissolve2
-    pause (1)
-    scene bg ext_aidpost_night with dissolve2
-    window show
-    
-    "Медпунктом оказалось небольшое одноэтажное здание с повисшим белым флагом. Предположительно на нём был красный крест."
-    "Свет внутри не горел. Собственно, мне туда и не надо было."
-    "Пройдя чуть дальше, я увидел небольшие кабинки, которые и представлял из себя туалет."
-
-    window hide
-    pause (1)
-    play sound_loop clock_timeskip fadein 2
-    show white_screen with dissolve2
-    show flt_timeskip_logo1 with dissolve
-    pause (1)
-    show flt_timeskip_logo2
-    with dissolve
-    hide flt_timeskip_logo2
-    show flt_timeskip_logo1
-    with dspr
-    show bg ext_square_night
-    show white_screen
-    with dissolve2
-    pause (1)
-    stop sound_loop fadeout 2
-    hide flt_timeskip_logo1
-    hide white_screen
-    with dissolve2
-    pause (1)
-    window show
-
-    "Когда я возвращался домой, Слави на площади уже не было."
-    th "Проверила всё походу, и спать пошла."
-    th "Летом всегда ложишься спать раньше, так как световой день больше, активность больше, да и вцелом время медленнее летит."
     window hide
     scene bg ext_house_of_dv_night with dissolve2
     window show
@@ -472,7 +306,6 @@
     window show
 
     "Беготня по лагерю в поисках туалета и тоскание спящей девочки на руках отняло у меня приличное количество сил, потому я не задумываясь ни о чём, на автомате побрёл к своему домику."
-
     th "Мда."
     th "Это ведь какой-то паррадокс!"
     th "До этого в моём окружении было множество красивых парней и девушек, но ни у кого не было пары."
@@ -485,3 +318,22 @@
     th "А в реальности люди пытаются найти любовь в интернете, через сайты и группы для знакомств."
     th "Но общение в сети и общение в жизни - это совершенно разные несвязные вещи."
     "Сил продолжать думать больше не осталось, поэтому я медленно начал погружаться в сон."
+
+    show cook_smile with dissolve
+
+    dns "Здравствуйте тёть Маш."
+    mar "Привет, Денис. {w}Компот будешь?"
+    dns "Буду."
+    mar "Погода сегодня хорошая, не правда?"
+    "Поливая сырники сгущёнкой, спросила Мария."
+    dns "Да, суперская просто. {w}Я вот на пляж пойду сегодня."
+    mar "Я бы тоже с удовольствием сходила, да вот работаю."
+    dns "Тогда не смею вас отвлекать!"
+    "Проговорил я, взяв тарелку, которую мне протянула повар."
+
+    show cook_laugh with dissolve
+
+    mar "Приятного аппетита!"
+    dns "Спасибо тёть Маш!"
+
+    hide cook_laugh with dissolve

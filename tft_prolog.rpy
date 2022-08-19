@@ -1,13 +1,14 @@
 label tft_prolog:
 
+
     $ new_chapter(0, u"Судьбы Двух. Пролог")
     $ persistent.timeofday = "night"
     $ prolog_time()
 
     window hide
     stop ambience
-    play sound porn_diapazon fadein 3
-    scene int_prolog_nightclub with dissolve2
+    play sound porn_diapazon fadein 5
+    scene int_prolog_nightclub with Dissolve(3)
     pause (11.5)
     play sound claps fadein 1
     play music stressedoutminus fadein 10
