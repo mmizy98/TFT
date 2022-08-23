@@ -6,10 +6,11 @@ label tft_prolog:
     $ prolog_time()
 
     window hide
+    pause (2)
     stop ambience
     play sound porn_diapazon fadein 5
-    scene int_prolog_nightclub with Dissolve(3)
-    pause (11.5)
+    scene int_prolog_nightclub with Dissolve(7)
+    pause (7)
     play sound claps fadein 1
     play music stressedoutminus fadein 10
     window show
@@ -82,7 +83,8 @@ label tft_prolog:
     scene black with dissolve2
     play sound ambience_city fadein 3
     play sound_loop sfx_far_steps fadein 3
-    show ext_winterpark_7dl at stepping with dissolve2
+    show ext_winterpark_7dl at stepping_tft behind SnowL with dissolve2
+    show SnowL
     window show
 
     if day0_drunk:
@@ -105,7 +107,8 @@ label tft_prolog:
     window hide
     pause (1)
     scene black with dissolve2
-    show ulica2 at stepping with dissolve2
+    show ulica2 at stepping_tft behind SnowL with dissolve2
+    show SnowL
     window show
 
     "В раздумьях я успел пройти мимо нужного мне пешеходного перехода."

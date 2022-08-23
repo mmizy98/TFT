@@ -4,50 +4,86 @@ init -99 python:
             "persistent.sprite_time=='day'", im.MatrixColor( FilePath, im.matrix.tint(0.83, 0.88, 0.92)),
             "persistent.sprite_time=='sunset'", im.MatrixColor(FilePath, im.matrix.tint(0.94, 0.82, 1.0)),
             "persistent.sprite_time=='night'", im.MatrixColor(FilePath, im.matrix.tint(0.63, 0.78, 0.82)))
-    
+init -98 python:
     def TFTgetRandomItem(items):
         num = renpy.random.randint(0, len(items)-1)
         return items[num]  
     def TFTgetRandomButton():
-        return TFTgetRandomItem(['f','z','v'])
-
+        return TFTgetRandomItem(['a','x','f','h','y','r','t','e'])
+init -97 python:
+    #Шрифты
+    furore = getFile("tft_fonts/Furore.ttf")
+init python:
+    renpy.music.register_channel("sfx_2",loop=False)
+    renpy.music.register_channel("sfx_3",loop=False)
 init:
     define config.developer = True
-    $ mods["tft_menu_main"]=u"Cудьбы Двух"
+    $ mods["tft_menu_main"]=u"{font=[furore]}Судьбы Двух"
     $ day1_vzlom = False
     $ day0_drunk =  False
     $ day4_cig = False
     $ tft_qte_loose = False
     $ tft_qte_count = 0
-
+#Спрайты для эффектов
+    #Снег
+    image Snf snf1 = getSprite("mods/TFT/image/sprites/misc/SnowLarge.png")
+    image Snf snf2 = getSprite("mods/TFT/image/sprites/misc/SnowNormal.png")
+    image Snf snf3 = getSprite("mods/TFT/image/sprites/misc/SnowLittle.png")
+    image SnowL:
+        truecenter
+        xzoom 1.4 yzoom 1.4
+        contains:
+            SnowBlossom("Snf snf1", 30, 50, (50,150), (250,400), 10)
+        contains:
+            SnowBlossom("Snf snf2", 120, 50, (50,150), (250,400), 10)
+        contains:
+            SnowBlossom("Snf snf3", 150, 50, (50,150), (250,400), 10)
+    #Пыль 
+    image Dst dst1 = getSprite("mods/TFT/image/sprites/misc/Dust1.png")
+    image Dst dst2 = getSprite("mods/TFT/image/sprites/misc/Dust2.png")
+    image DustB:
+        truecenter
+        zoom 1.5
+        contains:
+            SnowBlossom("Dst dst1", 20, 50, (-30,-25), (-30,30), 25, False, True)
+        contains:
+            SnowBlossom("Dst dst1", 20, 50, (25,30), (-30,30), 25, False, True)
+        contains:
+            SnowBlossom("Dst dst2", 20, 50, (-30,-25), (-30,30), 25, False, True)
+        contains:
+            SnowBlossom("Dst dst2", 20, 50, (25,30), (-30,30), 25, False, True)
+    #Светлячки 
+    image Flf flf1:
+        getSprite("mods/TFT/image/sprites/misc/FireFly1.png")
+        alpha 0.0
+        ease 1 alpha 1.0
+    image FireFlies:
+        truecenter
+        contains:
+            SnowBlossom("Flf flf1", 20, 80, (-30,25), (-30,30), 25, False, True)
 # Transforms:
-
     define flash_black = Fade(5, 0.0, 0.5, color="#000000")
-
-    transform stepping:
+    transform stepping_tft:
         anchor (0.0, 0.0) pos (0.0, 0.0)
         linear 0.5 pos (-5, -5)
         linear 0.5 pos (0, 0)
         linear 0.5 pos (5, -5)
         linear 0.5 pos (0, 0)
         repeat
-
-    transform running:
+    transform running_tft:
         anchor (0.0, 0.0) pos (0.0, 0.0)
         linear 0.2 pos (-5, -5)
         linear 0.2 pos (0, 0)
         linear 0.2 pos (5, -5)
         linear 0.2 pos (0, 0)
         repeat
-
-    transform headshaking:
+    transform headshaking_tft:
         anchor (0.0, 0.0) pos (0.0, 0.0)
         linear 0.08 pos (-7, 0)
         linear 0.08 pos (0, 0)
         linear 0.08 pos (7, 0)
         linear 0.08 pos (0, 0)
-
-    transform appdouble(imgn, z=1.1, zt=1.0, t=1.0):
+    transform appdouble_tft(imgn, z=1.1, zt=1.0, t=1.0):
         contains:
             ImageReference(imgn)
             truecenter
@@ -58,44 +94,15 @@ init:
             zoom z
             alpha 0.0
             pause zt
-            linear t xpos 0.48 alpha 0.3 zoom (z + 0.05)
+            linear t xpos 0.48 alpha 0.3 zoom (z + 0.2)
         contains:
             ImageReference(imgn)
             truecenter
             zoom z
             alpha 0.0
             pause zt
-            linear t xpos 0.51 alpha 0.2 zoom (z + 0.05)
-
-    screen tft_menu:
-        imagebutton:
-            xalign 0.01 yalign 0.11
-            auto "mods/TFT/image/screens/menu/tft_start_button_%s.png"
-            action Jump ("tft_prolog")
-        imagebutton:
-            xalign 0.008 yalign 0.57
-            auto "mods/TFT/image/screens/menu/tft_tracklist_button_%s.png"
-            action Jump ("tft_car")
-        imagebutton:
-            xalign 0.01 yalign 0.42
-            auto "mods/TFT/image/screens/menu/tft_set_button_%s.png"
-            action ShowMenu('preferences')
-        imagebutton:
-            xalign 0.01 yalign 0.72
-            auto "mods/TFT/image/screens/menu/tft_media_button_%s.png"
-            action Jump ("tft_car")
-        imagebutton:
-            xalign 0.01 yalign 0.87
-            auto "mods/TFT/image/screens/menu/tft_exit_button_%s.png"
-            action [ Function(toDefaultSettings), MainMenu() ]
-
-        imagebutton:
-            pos (1242, 540)
-            auto "mods/TFT/image/screens/menu/tft_car_button_%s.png"
-            action Jump ("tft_car")
-        
+            linear t xpos 0.51 alpha 0.2 zoom (z + 0.2)
 # Characters:
-
     $ dns = Character (u'Денис', color = "#a7c575", what_color = "E2C778")
     $ ars = Character (u'Арсений', color = "#de6868", what_color = "E2C778")
     $ fan = Character (u'Поклонник', color = "#7e79b5", what_color = "E2C778")
@@ -104,13 +111,10 @@ init:
     $ muz = Character (u'Музыкант', color = "#440475", what_color = "E2C778")
     $ muzs = Character (u'Музыканты', color = "#440475", what_color = "E2C778")
     $ ded = Character (u'Дядя Петя', color = "#fbff00", what_color = "E2C778")
-    
 # Sounds:
-
     # Эмбиент:
     $ ambience_rain_7dl = "mods/TFT/image/sound/ambience/ambience_rain_7dl.ogg"
     $ ambience_rain_in_7dl = "mods/TFT/image/sound/ambience/ambience_rain_in_7dl.ogg"
-
     # Music:
     $ roxette = "mods/TFT/image/sound/music/roxette.mp3"
     $ your_nobility = "mods/TFT/image/sound/music/your_nobility.mp3"
@@ -133,7 +137,6 @@ init:
     $ d4_dv_song = "mods/TFT/image/sound/music/d4_dv_song.mp3"
     $ grob_oborona = "mods/TFT/image/sound/music/grob_oborona.mp3"
     $ sos_pro_kota = "mods/TFT/image/sound/music/sos_pro_kota.mp3"
-    
     # SFX:
     $ heartbeat = "mods/TFT/image/sound/sfx/heartbeat.mp3"
     $ avaria = "mods/TFT/image/sound/sfx/avaria.mp3"
@@ -158,10 +161,10 @@ init:
     $ liazdoor = "mods/TFT/image/sound/sfx/liazdoor.mp3"
     $ coldsteps = "mods/TFT/image/sound/sfx/coldsteps.mp3"
     $ train = "mods/TFT/image/sound/sfx/train_inside.mp3"
-
-    
+    $ sfx_menu_selected = "mods/TFT/image/sound/sfx/sfx_menu_selected.mp3"
+    $ sfx_menu_select = "mods/TFT/image/sound/sfx/sfx_menu_select.mp3"
+    $ sfx_door_ding = "mods/TFT/image/sound/sfx/sfx_door_ding.mp3"
 # Pictures:
-
     # Alisa pics:
     image aliceroof = "mods/TFT/image/cg/aliceroof.jpg"
     image dvfire = "mods/TFT/image/cg/dvfire.jpg"
@@ -200,7 +203,6 @@ init:
     image d4_dv_stage_4_ll = "mods/TFT/image/cg/d4_dv_stage_4_ll.jpg"
     image d4_dv_stage_5_ll = "mods/TFT/image/cg/d4_dv_stage_5_ll.jpg"
     image d4_dv_stage_6_ll = "mods/TFT/image/cg/d4_dv_stage_6_ll.jpg"
-    
     # Other:
     image food_breakfast = "mods/TFT/image/cg/food_breakfast.png"
     image volleyball = "mods/TFT/image/cg/volleyball.png"
@@ -220,9 +222,7 @@ init:
     image jerry = "mods/TFT/image/cg/jerry.jpg"
     image mirror2 = "mods/TFT/image/cg/semyon_mirror2.jpg"
     image grib_draw = "mods/TFT/image/cg/grib_draw.jpg"
-
 # Backgrounds:
-    
     # City:
     image night_bar = "mods/TFT/image/bg/night_bar.jpg"
     image int_prolog_nightclub = "mods/TFT/image/bg/int_bar_7dl.jpg"
@@ -253,7 +253,6 @@ init:
     image ext_bus_city = "mods/TFT/image/bg/ext_bus_city.jpg"
     image kitchen = "mods/TFT/image/bg/kitchen.jpg"
     image podzd = "mods/TFT/image/bg/podzd.jpg"
-    
     # Camp:
     image ext_beach2_day_7dl = "mods/TFT/image/bg/ext_beach2_day_7dl.jpg"
     image int_attic_7dl = "mods/TFT/image/bg/int_attic_7dl.jpg"
@@ -329,7 +328,6 @@ init:
     image ext_washstand2_night = "mods/TFT/image/bg/ext_washstand2_night.jpg"
     image ext_pier_night = "mods/TFT/image/bg/ext_pier_night.jpg"
     image ext_boathouse_alt_night_7dl = "mods/TFT/image/bg/ext_boathouse_alt_night_7dl.jpg"
-
     # Rain:
     image int_musclub_rain_7dl = "mods/TFT/image/bg/int_musclub_rain_7dl.jpg"
     image ext_washstand_rain_7dl = "mods/TFT/image/bg/ext_washstand_rain_7dl.jpg"
@@ -338,11 +336,7 @@ init:
     image ext_forest_camp_sunset = "mods/TFT/image/bg/ext_forest_camp_sunset.jpg"
     image ext_forest_camp_night = "mods/TFT/image/bg/ext_forest_camp_night.jpg"
     image ext_square_rain_day_7dl = "mods/TFT/image/bg/ext_square_rain_day_7dl.jpg"
-
-
-
 # image/sprites:
-
     # Alisa sport wear:
     image dv angry sport flt  = getSprite("mods/TFT/image/sprites/dv/normal/sport/sport_dv_normal_angry.png")
     image dv laugh sport flt  = getSprite("mods/TFT/image/sprites/dv/normal/sport/sport_dv_normal_laugh.png")
@@ -357,13 +351,11 @@ init:
     image dv guilty sport flt = getSprite("mods/TFT/image/sprites/dv/normal/sport/sport_dv_normal_guilty.png")
     image dv sad sport flt = getSprite("mods/TFT/image/sprites/dv/normal/sport/sport_dv_normal_sad.png")
     image dv shy sport flt = getSprite("mods/TFT/image/sprites/dv/normal/sport/sport_dv_normal_shy.png")
-    
     # Alisa sport wear far:
     image dv angry sport far flt = getSprite("mods/TFT/image/sprites/dv/far/sport/sport_dv_angry.png")
     image dv rage sport far flt = getSprite("mods/TFT/image/sprites/dv/far/sport/sport_dv_rage.png")
     image dv surprise sport far flt = getSprite("mods/TFT/image/sprites/dv/far/sport/sport_dv_surprise.png")
     image sport_dv_far_grin flt = getSprite("mods/TFT/image/sprites/dv/far/sport/sport_dv_grin.png")
-    
     # Alisa underwear:
     image dv shy swim flt = getSprite("mods/TFT/image/sprites/dv/normal/swim/swim_dv_shy.png")
     image dv sadsmile swim flt = getSprite("mods/TFT/image/sprites/dv/normal/swim/swim_dv_sadsmile.png")
@@ -377,7 +369,6 @@ init:
     image dv smile hair flt = getSprite("mods/TFT/image/sprites/dv/normal/swim/dv_smile_hair.png")
     image dv smile hairskirt flt = getSprite("mods/TFT/image/sprites/dv/normal/swim/dv_smile_hairskirt.png")
     image dv smile swim flt = getSprite("mods/TFT/image/sprites/dv/normal/swim/dv_smile_swim.png")
-
     # Alisa wet pioneer:
     image dv angry wet flt = getSprite("mods/TFT/image/sprites/dv/normal/wet/wet_dv_angry_rain.png")
     image dv cry wet flt = getSprite("mods/TFT/image/sprites/dv/normal/wet/wet_dv_cry_rain.png")
@@ -387,7 +378,6 @@ init:
     image dv sad wet flt = getSprite("mods/TFT/image/sprites/dv/normal/wet/wet_dv_sad_rain.png")
     image dv shy wet flt = getSprite("mods/TFT/image/sprites/dv/normal/wet/wet_dv_shy_rain.png")
     image dv surprise wet flt = getSprite("mods/TFT/image/sprites/dv/normal/wet/wet_dv_surprise_rain.png")
-    
     # Аlisa pioneer:
     image dv smile pioneer close flt = getSprite("mods/TFT/image/sprites/dv/close/pioneer/pioneer_dv_smile3.png")
     image dv smile2 pioneer close flt = getSprite("mods/TFT/image/sprites/dv/close/pioneer/pioneer_dv_smile4.png")
@@ -406,7 +396,6 @@ init:
     image dv angry pioneer flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer/dv_angry_pioneer.png")
     image dv normal pioneer flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer/dv_normal_pioneer.png")
     image dv smile pioneer flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer/dv_smile_pioneer.png")
-    
     # Alisa pioneer style:
     image dv heart pioneer2 far flt = getSprite("mods/TFT/image/sprites/dv/far/pioneer2/pioneer2_dv_heart.png")
     image dv sad2 pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/pioneer2_dv_sad2.png")
@@ -423,7 +412,6 @@ init:
     image dv angry pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/pioneer2_dv_angry.png")
     image dv rage pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/pioneer2_dv_rage.png")
     image dv normal pioneer2 flt = getSprite("mods/TFT/image/sprites/dv/normal/pioneer2/dv_normal_pioneer2.png")
-
     # Arseniy pioneer:
     image ars_angry = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_angry.png")
     image ars_angry2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_angry2.png")
@@ -437,7 +425,6 @@ init:
     image ars_surprise2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_surprise2.png")
     image ars_think = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_think.png")
     image ars_think2 = getSprite("mods/TFT/image/sprites/ars/pioneer/ars_think2.png")
-
     #Miku wet
     image mi_grin_wet_rain = getSprite("mods/TFT/image/sprites/mi/wet/mi_grin_wet_rain.png")
     image mi_normal_wet_rain = getSprite("mods/TFT/image/sprites/mi/wet/mi_normal_wet_rain.png")
@@ -447,61 +434,242 @@ init:
     image mi_upset_wet_rain = getSprite("mods/TFT/image/sprites/mi/wet/mi_upset_wet_rain.png")
     image mi_scared_wet_rain = getSprite("mods/TFT/image/sprites/mi/wet/mi_scared_wet_rain.png")
     image mi_shocked_wet_rain = getSprite("mods/TFT/image/sprites/mi/wet/mi_shocked_wet_rain.png")
-    
     # Arseniy coat:
     image coat_ars_angry = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_angry.png")
     image coat_ars_normal = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_normal.png")
     image coat_ars_smile = getSprite("mods/TFT/image/sprites/ars/coat/coat_ars_smile.png")
-    
     # Alisa coat:
     image coat_dv_normal = getSprite("mods/TFT/image/sprites/dv/normal/coat/coat_dv_normal.png")
     image coat_dv_surprise = getSprite("mods/TFT/image/sprites/dv/normal/coat/coat_dv_surprise.png")
-    
     # Alisa sleep wear:
     image sleep_dv_shy = getSprite("mods/TFT/image/sprites/dv/far/sleep/sleep_dv_shy.png")
-    
     # Uliana pioneer:
     image spina_us = getSprite("mods/TFT/image/sprites/us/spina_us.png")
-    
     # Miku pioneer:
     image spina_mi = getSprite("mods/TFT/image/sprites/mi/spina_mi.png")
     image miku_ruki = getSprite("mods/TFT/image/sprites/mi/miku_ruki.png")
-    
     # Cook:
     image cook_laugh = getSprite("mods/TFT/image/sprites/nt/nt_1_cook.png")
     image cook_smile = getSprite("mods/TFT/image/sprites/nt/nt_2_cook.png")
     image cook_normal = getSprite("mods/TFT/image/sprites/nt/nt_3_cook.png")
     image cook_sad = getSprite("mods/TFT/image/sprites/nt/nt_4_cook.png")
-    
     # Pioneer coat:
     image coat_pi = getSprite("mods/TFT/image/sprites/pi/coat_pi.png")
-    
     # s1pepega:
     image petr_smile = getSprite("mods/TFT/image/sprites/ded/petr_smile.png")
     image petr_grin = getSprite("mods/TFT/image/sprites/ded/petr_grin.png")
     image petr_normal = getSprite("mods/TFT/image/sprites/ded/petr_normal.png")
-
     # Chairs:
     image chair = getSprite("mods/TFT/image/sprites/misc/chair.png")
     image chair2 = getSprite("mods/TFT/image/sprites/misc/chair2.png")
-
     # other
     image aftertwohour = getSprite("mods/TFT/image/screens/other/aftertwohour.png")
     image day3 = getSprite("mods/TFT/image/screens/other/day3.png")
     image white_screen = getSprite("mods/TFT/image/screens/other/white_screen.png")
     image tft_menu_background = getSprite("mods/TFT/image/screens/menu/tft_menu_background.png")
-
     #qte:
-    image tft_qte_anim_button_green:
-        "mods/TFT/image/screens/qte_buttons/qte_button_green1.png"
-        0.2
-        "mods/TFT/image/screens/qte_buttons/qte_button_green.png"
-        0.2
-        repeat
-
-    image tft_qte_anim_button_blue:
-        "mods/TFT/image/screens/qte_buttons/qte_button_blue1.png"
-        0.2
-        "mods/TFT/image/screens/qte_buttons/qte_button_blue.png"
-        0.2
-        repeat
+    image tft_qte_button:
+        "mods/TFT/image/screens/qte_buttons/tft_qte_button.png"
+    #qte_bar
+    image tft_qte_bar:
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar1.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar2.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar3.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar4.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar5.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar6.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar7.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar8.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar9.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar10.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar11.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar12.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar13.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar14.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar15.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar16.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar17.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar18.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar19.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar20.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar21.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar22.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar23.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar24.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar25.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar26.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar27.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar28.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar29.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar30.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar31.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar32.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar33.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar34.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar35.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar36.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar37.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar38.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar39.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar40.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar41.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar42.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar43.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar44.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar45.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar46.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar47.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar48.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar49.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar50.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar51.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar52.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar53.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar54.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar55.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar56.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar57.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar58.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar59.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar60.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar61.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar62.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar63.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar64.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar65.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar66.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar67.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar68.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar69.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar70.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar71.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar72.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar73.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar74.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar75.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar76.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar77.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar78.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar79.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar80.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar81.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar82.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar83.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar84.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar85.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar86.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar87.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar88.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar89.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar90.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar91.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar92.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar93.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar94.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar95.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar96.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar97.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar98.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar99.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar100.png"
+        0.05
+        "mods/TFT/image/screens/qte_bar/tft_qte_bar0.png"

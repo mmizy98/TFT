@@ -645,25 +645,25 @@ label tft_day2:
     play sound sfx_open_cabinet_2
     play ambience ambience_rain_7dl fadein 3
     scene black
-    show ext_village_rain_ll at running
+    show ext_village_rain_ll at running_tft
     with dissolve2
     pause (1)
     scene black with Dissolve(3)
-    show ext_warehouse_rain_day_7dl at running with Dissolve(3)
+    show ext_warehouse_rain_day_7dl at running_tft with Dissolve(3)
     pause (0.5)
-    hide ext_warehouse_rain_day_7dl at running with dissolve2
+    hide ext_warehouse_rain_day_7dl at running_tft with dissolve2
     pause (0.5)
-    show ext_square_rain_day_7dl at running with dissolve2
+    show ext_square_rain_day_7dl at running_tft with dissolve2
     pause (0.5)
-    hide ext_square_rain_day_7dl at running with dissolve2
+    hide ext_square_rain_day_7dl at running_tft with dissolve2
     pause (0.5)
-    show ext_washstand_rain_7dl at running with dissolve2
+    show ext_washstand_rain_7dl at running_tft with dissolve2
     pause (0.5)
-    hide ext_washstand_rain_7dl at running with dissolve2
+    hide ext_washstand_rain_7dl at running_tft with dissolve2
     pause (0.5)
-    show ext_musclub_rain_7dl at running with dissolve2
+    show ext_musclub_rain_7dl at running_tft with dissolve2
     pause (0.5)
-    hide ext_musclub_rain_7dl at running with dissolve2
+    hide ext_musclub_rain_7dl at running_tft with dissolve2
     pause (0.5)
     play sound sfx_open_cabinet_1
     play ambience ambience_rain_in_7dl fadein 3
@@ -1163,15 +1163,16 @@ label tft_day2:
     play sound sfx_open_cabinet_1
     stop ambience fadeout 2
     play ambience ambience_forest_night fadein 4
-    scene domextnight with dissolve2
+    show FireFlies
+    show domextnight behind FireFlies with dissolve2
     window show 
     
     "Я вышел из домика, и под стрекотание сверчков побрёл куда глаза глядят."
 
     window hide
-    scene muznight3 with dissolve2
+    show muznight3 behind FireFlies with dissolve2
     pause (1)
-    scene ext_washstand_night_7dl with dissolve2
+    show ext_washstand_night_7dl behind FireFlies with dissolve2
     window show
     
     "Выйдя к умывальникам меня посетила идея умыться."
@@ -1200,13 +1201,15 @@ label tft_day2:
     "Выключив воду я побрёл дальше."
 
     window hide
-    scene ext_washstand_night_7dl with dissolve2
+    show FireFlies
+    show ext_washstand_night_7dl with dissolve2
     pause (1)
-    scene muznight3 with dissolve2
+    show muznight3 with dissolve2
     pause (1)
-    scene ext_houses_night with dissolve2
+    show ext_houses_night with dissolve2
     pause (1)
     scene bg ext_square_night with dissolve2
+    show FireFlies
     window show
 
     "Выйдя на площадь я замер напротив памятника некому ''Генде''."
@@ -1229,7 +1232,7 @@ label tft_day2:
 
     window hide
     stop ambience fadeout 2
-    scene bg ext_boathouse_night with dissolve2
+    show bg ext_boathouse_night behind FireFlies with dissolve2
     play ambience ambience_lake_shore_night fadein 3
     window show
 
@@ -1435,24 +1438,26 @@ label tft_day2:
     stop ambience fadeout 1.5
     play ambience ambience_forest_night fadein 4
     scene bg ext_boathouse_night with dissolve2
+    show FireFlies
     pause (1)
-    scene bg ext_square_night with dissolve2
+    show bg ext_square_night behind FireFlies with dissolve2
     pause (1)
-    scene ext_houses_night with dissolve2
+    show ext_houses_night behind FireFlies with dissolve2
     pause (1)
-    scene bg ext_house_of_dv_night with dissolve2
+    hide bg ext_square_night
+    show bg ext_house_of_dv_night behind FireFlies with dissolve2
     window show
-
 
     "Я проводил Алису до домика."
     "Она даже хлопнула меня по плечу на прощание."
     
     window hide
-    scene domextnight with dissolve2
+    show domextnight behind FireFlies with dissolve2
+    pause (1)
     play sound sfx_open_cabinet_1
-    stop ambience fadeout 1.5
-    play ambience ambience_int_cabin_night fadein 2
+    stop ambience fadeout 2
     scene domnight with dissolve2
+    play ambience ambience_int_cabin_night fadein 3
     window show
 
     "Арсений к этому моменту, видимо, уже вернулся домой, и валялся на своей кровати."

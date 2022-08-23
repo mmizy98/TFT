@@ -495,8 +495,7 @@ label tft_day1:
     dns "Не боись."
 
     window hide
-    pause (1)
-    call tft_qte_green_start(1,60)
+    call tft_qte_label(1,5.2)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -508,8 +507,7 @@ label tft_day1:
     "Я же наоборот подавал снизу."
     
     window hide
-    pause (1)
-    call tft_qte_green_start(1,60)
+    call tft_qte_label(1,5.2)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -518,8 +516,7 @@ label tft_day1:
     "Наша команда зарабатывает третье очко."
 
     window hide
-    pause (1)
-    call tft_qte_green_start(1,60)
+    call tft_qte_label(1,5.2)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -538,8 +535,7 @@ label tft_day1:
     "Он ударяет, мяч летит в дальний левый угол."
 
     window hide
-    pause (1)
-    call tft_qte_green_start(1,60)
+    call tft_qte_label(1,5.2)
     pause (0.5)
     play sound sfx_soccer_ball_kick
     window show
@@ -719,14 +715,14 @@ label tft_day1:
 
     window hide
     stop music fadeout 6
-    scene black with Dissolve(4)
+    show black with Dissolve(4)
     pause (2)
     play ambience ambience_int_cabin_night fadein 5
     window hide
     pause (1)
     $ persistent.sprite_time = "night"
     $ persistent.timeofday = "night"
-    scene domnight with dissolve2
+    show domnight with dissolve2
     window show
     pause (1)
     
@@ -742,15 +738,19 @@ label tft_day1:
     "Тихо переодевшись, пионерскую форму дабы не нарушить его сон, я вышел из домика."
     
     window hide
+    show FireFlies
     stop ambience fadeout 3
     play sound sfx_open_cabinet_1
     pause (1)
     play ambience ambience_forest_night fadein 3
-    scene domextnight with dissolve2
+    show domextnight behind FireFlies with dissolve2
     pause (1)
-    scene bg ext_house_of_dv_night with dissolve2
+    show bg ext_house_of_dv_night behind FireFlies with dissolve2
     pause (1)
-    scene ext_houses_night with dissolve2
+    show ext_houses_night behind FireFlies with dissolve2
+    hide bg ext_house_of_dv_night
+    hide domextnight
+    hide black
     window show
     
     "В лагере было пусто."
@@ -759,9 +759,9 @@ label tft_day1:
     "Атмосфера ночи, когда в округе нет никого кроме тебя самого - одно из самых завораживающих явлений, которое может увидеть человек в простых условиях."
 
     window hide
-    scene bg ext_square_night with dissolve2
+    show bg ext_square_night behind FireFlies with dissolve2
     pause (1)
-    scene bg ext_dining_hall_away_night with dissolve2
+    show bg ext_dining_hall_away_night behind FireFlies with dissolve2
     pause (1)
     window show
     
@@ -770,7 +770,7 @@ label tft_day1:
     th "Может это Мария?"
     
     window hide
-    scene bg ext_dining_hall_near_night with dissolve2
+    show bg ext_dining_hall_near_night behind FireFlies with dissolve2
     play sound_loop sfx_alisa_picklock fadein 2
     window show
     
@@ -1027,12 +1027,17 @@ label tft_day1:
     "Затем помог Алисе аккуратно спуститься."
     
     window hide
-    scene black with dissolve2
-    scene bg ext_square_night with dissolve2
+    show FireFlies
+    show black behind FireFlies with dissolve2
+    hide black
+    show bg ext_square_night behind FireFlies
+    with dissolve2
     pause (1)
-    scene bg ext_house_of_dv_night with dissolve2
+    hide bg ext_square_night
+    show bg ext_house_of_dv_night behind FireFlies
+    with dissolve2
     pause (1)
-    show dv smile pioneer flt with dissolve
+    show dv smile pioneer flt behind FireFlies with dissolve
     window show
     
     "Мы остановились возле домика, находящегося неподалёку от моего."
@@ -1056,10 +1061,10 @@ label tft_day1:
     "А я пошёл к себе."
     
     window hide
-    scene domextnight with dissolve2
+    show domextnight behind FireFlies with dissolve2
     play ambience ambience_int_cabin_night fadein 4
     pause (1)
-    scene domnight with dissolve2
+    show domnight with dissolve2
     window show
     
     "Соседняя кровать была пуста. {w}Арсения дома не было."
@@ -1071,7 +1076,7 @@ label tft_day1:
     th "Надеюсь Арсений меня разбудит."
     
     window hide
-    scene anim prolog_1 with Dissolve(3)
+    show anim prolog_1 with Dissolve(3)
     stop ambience fadeout 4
     pause (4)
     window show
@@ -1087,7 +1092,7 @@ label tft_day1:
     window hide
     stop music fadeout 5
     stop ambience fadeout 5
-    scene black with Dissolve(5)
+    show black with Dissolve(5)
     pause (1)
     jump tft_day2
 
