@@ -1,24 +1,18 @@
-#======================================#
-#САМО QTE
+#ЭКРРАНЫ QTE
 screen tft_qte_start(pressed_key, time):
     add "tft_qte_button" xalign 0.5 yalign 0.5
     key pressed_key action [ Hide("tft_qte_start"), Return() ] 
     text "{font=[furore]}[pressed_key]" pos (907, 390) size 150 color "#ffffff"
     timer time action [ Hide("tft_qte_start"), SetVariable("tft_qte_loose", True), Return() ]
     add "tft_qte_bar" xalign 0.5 yalign 0.3
-screen tft_qte3_start(pressed_key, time):
-    add "tft_qte_button" xalign 0.5 yalign 0.5
-    key pressed_key action [ Hide("tft_qte3_start"), Return() ] 
-    text "{font=[furore]}[pressed_key]" pos (907, 390) size 150 color "#ffffff"
-    timer time action [ Hide("tft_qte3_start"), SetVariable("tft_qte3_loose", True), Return() ]
-    add "tft_qte_bar" xalign 0.5 yalign 0.3
+
 screen tft_qte2_start(pressed_key, time):
     add "tft_qte_button" xalign 0.5 yalign 0.5
     key pressed_key action [ Hide("tft_qte2_start"), Return() ] 
     text "{font=[furore]}[pressed_key]" pos (907, 390) size 150 color "#ffffff"
     timer time action [ Hide("tft_qte2_start"), SetVariable("tft_qte2_loose", True), Return() ]
     add "tft_qte_bar" xalign 0.5 yalign 0.3
-#======================================#
+
 #ЛЭЙБЛЫ QTE
 label tft_qte_label(count=1, time=2):
     $ tft_qte_count = count
@@ -29,6 +23,7 @@ label tft_qte_label(count=1, time=2):
             call screen tft_qte_start(TFTgetRandomButton(),time)
         $ tft_qte_count -= 1
     return
+
 label tft_qte2_label(count=1, time=2):
     $ tft_qte2_count = count
     while tft_qte2_count > 0:
@@ -38,16 +33,7 @@ label tft_qte2_label(count=1, time=2):
             call screen tft_qte2_start(TFTgetRandomButton(),time)
         $ tft_qte2_count -= 1
     return
-label tft_qte3_label(count=1, time=2):
-    $ tft_qte3_count = count
-    while tft_qte3_count > 0:
-        if tft_qte3_loose:
-            pass
-        else:
-            call screen tft_qte3_start(TFTgetRandomButton(),time)
-        $ tft_qte3_count -= 1
-    return
-#======================================#
+
 #ПРЕДУПРЕЖДЕНИЕ О QTE
     image qte_alert:
         getFile("gui/qte/qte_alert_4.png")
@@ -64,11 +50,11 @@ label tft_qte3_label(count=1, time=2):
         0.3
         getFile("gui/qte/qte_alert_4.png")
         repeat
-#======================================#
+
 #КНОПКА QTE
     image tft_qte_button:
         getFile("gui/qte/tft_qte_button.png")
-#======================================#
+
 #ТАЙМЕР
     image tft_qte_bar:
         getFile("gui/qte/tft_qte_bar1.png")

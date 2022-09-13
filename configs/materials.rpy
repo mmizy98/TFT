@@ -13,6 +13,7 @@ init 2:
             SnowBlossom("Snf snf2", 120, 50, (50,150), (250,400), 10)
         contains:
             SnowBlossom("Snf snf3", 150, 50, (50,150), (250,400), 10)
+
 #КАРТИНКИ ПЫЛИ И ЭФФЕКТ
     image Dst dst1 = getFile("sprites/misc/Dust1.png")
     image Dst dst2 = getFile("sprites/misc/Dust2.png")
@@ -27,6 +28,7 @@ init 2:
             SnowBlossom("Dst dst2", 20, 50, (-30,-25), (-30,30), 25, False, True)
         contains:
             SnowBlossom("Dst dst2", 20, 50, (25,30), (-30,30), 25, False, True)
+
 #СВЕТЛЯЧКИ И ЭФФЕКТ
     image Flf flf1:
         getFile("sprites/misc/FireFly1.png")
@@ -36,6 +38,7 @@ init 2:
         truecenter
         contains:
             SnowBlossom("Flf flf1", 20, 80, (-30,25), (-30,30), 25, False, True)
+
 #ИКОНКИ ДОСТИЖЕНИЙ:
     image achieve_locked = getFile("gui/achievements/achieve_locked.png")
     image achieve_menu_easter_egg = getFile("gui/achievements/achieve_menu_easter_egg.png")
@@ -43,13 +46,14 @@ init 2:
     image achieve_day3_qte_almost = getFile("gui/achievements/achieve_day3_qte_almost.png")
     image achieve_day3_qte_loose = getFile("gui/achievements/achieve_day3_qte_loose.png")
     image achieve_day3_nice_punch = getFile("gui/achievements/achieve_day3_nice_punch.png")
-#ВИДЕО:
-    $ pirat = getFile("pirat.mp3")
+
 #ЗВУКИ:
 #ОКРУЖЕНИЕ:
     $ ambience_rain_7dl = getFile("sound/ambience/ambience_rain_7dl.ogg")
     $ ambience_rain_in_7dl = getFile("sound/ambience/ambience_rain_in_7dl.ogg")
+
 #МУЗЫКА:
+    $ letov_u_okna = getFile("sound/music/letov_u_okna.mp3")
     $ roxette = getFile("sound/music/roxette.mp3")
     $ your_nobility = getFile("sound/music/your_nobility.mp3")
     $ GS_Chasing_a_Rumor = getFile("sound/music/GS_Chasing_a_Rumor.mp3")
@@ -71,6 +75,7 @@ init 2:
     $ d4_dv_song = getFile("sound/music/d4_dv_song.mp3")
     $ grob_oborona = getFile("sound/music/grob_oborona.mp3")
     $ sos_pro_kota = getFile("sound/music/sos_pro_kota.mp3")
+
 #ПОСТОРОННИЕ ЗВУКИ:
     $ heartbeat = getFile("sound/sfx/heartbeat.mp3")
     $ avaria = getFile("sound/sfx/avaria.mp3")
@@ -98,7 +103,9 @@ init 2:
     $ sfx_menu_selected = getFile("sound/sfx/sfx_menu_selected.mp3")
     $ sfx_menu_select = getFile("sound/sfx/sfx_menu_select.mp3")
     $ sfx_door_ding = getFile("sound/sfx/sfx_door_ding.mp3")
+
 #ЦГ:
+    image d4_dv_beach1 = getFile("cg/d4_dv_beach1.jpg")
     image aliceroof = getFile("cg/aliceroof.jpg")
     image dvfire = getFile("cg/dvfire.jpg")
     image dv_polyana2 = getFile("cg/dv_polyana2.jpg")
@@ -154,27 +161,24 @@ init 2:
     image jerry = getFile("cg/jerry.jpg")
     image mirror2 = getFile("cg/semyon_mirror2.jpg")
     image grib_draw = getFile("cg/grib_draw.jpg")
+
 #БГ:
 #ГОРОД:
+    image ach_bg = getFile("gui/ach_bg.jpg")
+    image int_staircase_7dl = getFile("bg/int_staircase_7dl.jpg")
     image night_bar = getFile("bg/night_bar.jpg")
     image int_prolog_nightclub = getFile("bg/int_bar_7dl.jpg")
     image ext_city_night_7dl = getFile("bg/ext_city_night_7dl.jpg")
     image ext_mv2_7dl = getFile("bg/ext_mv2_7dl.jpg")
     image cityhouse = getFile("bg/cityhouse.jpg")
-    image ext_bus_city = getFile("bg/ext_bus_city.jpg")
     image windowsun = getFile("bg/windowsun.jpg")
     image roommorning = getFile("bg/roommorning.png")
-    image kitchen2 = getFile("bg/kitchen2.jpg")
     image roomwindowsun = getFile("bg/int_semen_room_window_day_7dl.jpg")
-    image podzd2 = getFile("bg/podzd2.jpg")
     image ulica2 = getFile("bg/ulica2.jpg")
-    image market = getFile("bg/market.png")
-    image market2 = getFile("bg/market2.png")
     image ostanovka2 = getFile("bg/ostanovka2.jpg")
     image vavtday = getFile("bg/vavtday.jpg")
     image busepilogue = getFile("bg/busepilogue.png")
     image roomreal = getFile("bg/roomreal.jpg")
-    image lift = getFile("bg/lift_normal.jpg")
     image city1 = getFile("bg/dct_landscape_city1.jpg")
     image city2 = getFile("bg/ext_IRL_night.png")
     image ulica2 = getFile("bg/ulica2.jpg")
@@ -183,10 +187,9 @@ init 2:
     image vavt = getFile("bg/vavt.jpg")
     image ulica_day = getFile("bg/ulica_day.jpg")
     image ext_bus_city = getFile("bg/ext_bus_city.jpg")
-    image kitchen = getFile("bg/kitchen.jpg")
     image podzd = getFile("bg/podzd.jpg")
+
 #ЛАГЕРЬ:
-    image ext_beach2_day_7dl = getFile("bg/ext_beach2_day_7dl.jpg")
     image int_attic_7dl = getFile("bg/int_attic_7dl.jpg")
     image dct_ext_hangar_sunset = getFile("bg/dct_ext_hangar_sunset.jpg")
     image int_house_of_nuv_day = getFile("bg/int_house_of_nuv_day.jpg")
@@ -195,7 +198,6 @@ init 2:
     image ext_admins_night_7dl = getFile("bg/ext_admins_night_7dl.jpg")
     image ext_admins_day_7dl = getFile("bg/ext_admins_day_7dl.jpg")
     image int_house_of_dv_night2 = getFile("bg/int_house_of_dv_night2.jpg")
-    image int_staircase_7dl = getFile("bg/int_staircase_7dl.jpg")
     image int_store_7dl = getFile("bg/int_store_7dl.jpg")
     image ext_volley_court_7dl = getFile("bg/ext_volley_court_7dl.jpg")
     image ext_houses_night = getFile("bg/ext_houses_night.jpg")
@@ -260,6 +262,7 @@ init 2:
     image ext_washstand2_night = getFile("bg/ext_washstand2_night.jpg")
     image ext_pier_night = getFile("bg/ext_pier_night.jpg")
     image ext_boathouse_alt_night_7dl = getFile("bg/ext_boathouse_alt_night_7dl.jpg")
+
 #ДОЖДЛИВЫЕ:
     image int_musclub_rain_7dl = getFile("bg/int_musclub_rain_7dl.jpg")
     image ext_washstand_rain_7dl = getFile("bg/ext_washstand_rain_7dl.jpg")
@@ -275,399 +278,495 @@ init 2:
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_angry.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_angry.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_angry.png")
+
     image dv laugh sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_laugh.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_laugh.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_laugh.png")
+
     image dv smile sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_smile.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_smile.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_smile.png")
+
     image dv normal sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_normal.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_normal.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_normal.png")
+
     image dv shoked sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_shoked.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_shoked.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_shoked.png")
+
     image dv scared sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_scared.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_scared.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_scared.png")
+
     image dv cry sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_cry.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_cry.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_cry.png")
+
     image dv surprise sport flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise.png")
+
     image dv surprise2 sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_surprise2.png")
+
     image dv grin sport flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_grin.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_grin.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_grin.png")
+
     image dv guilty sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_guilty.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_guilty.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_guilty.png")
+
     image dv sad sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_sad.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_sad.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_sad.png")
+
     image dv shy sport flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_shy.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/sport/sport_dv_normal_shy.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/sport/sport_dv_normal_shy.png")
+
 #АЛИСА СПОРТИВКИ ДАЛЕКО:
     image dv angry sport far flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_angry.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_angry.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/far/sport/sport_dv_angry.png")
+
     image dv rage sport far flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_rage.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_rage.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/far/sport/sport_dv_rage.png")
+
     image dv surprise sport far flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_surprise.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_surprise.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "")
+
     image sport_dv_far_grin flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_grin.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/sport/sport_dv_grin.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/far/sport/sport_dv_grin.png")
+
 #АЛИСА КУПАЛЬНИК:
     image dv shy swim flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_shy.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_shy.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/swim_dv_shy.png")
+
     image dv sadsmile swim flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_sadsmile.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_sadsmile.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/swim_dv_sadsmile.png")
+
     image dv sad swim flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_sad.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/swim_dv_sad.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/swim_dv_sad.png")
+
     image dv shy skirt flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/skirt_dv_shy.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/skirt_dv_shy.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/skirt_dv_shy.png")
+
     image dv smile pioneerskirt flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_pioneerskirt.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_pioneerskirt.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_pioneerskirt.png")
+
     image dv smile pioneershirt flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_pioneershirt.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_pioneershirt.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_pioneershirt.png")
+
     image dv smile swimhair flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_swimhair.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_swimhair.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_swimhair.png")
+
     image dv grin swimhair flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_grin_swimhair.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_grin_swimhair.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_grin_swimhair.png")
+        
     image dv smile hair flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_hair.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_hair.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_hair.png")
+
     image dv smile hairskirt flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_hairskirt.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_hairskirt.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_hairskirt.png")
+        
     image dv smile swim flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_swim.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/swim/dv_smile_swim.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/swim/dv_smile_swim.png")
+
 #АЛИСА МОКРАЯ:
     image dv angry wet flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_angry_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_angry_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_angry_rain.png")
+
     image dv cry wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_cry_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_cry_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_cry_rain.png")
+
     image dv laugh wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_laugh_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_laugh_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_laugh_rain.png")
+
     image dv normal wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_normal_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_normal_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_normal_rain.png")
+
     image dv rage wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_rage_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_rage_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_rage_rain.png")
+
     image dv sad wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_sad_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_sad_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_sad_rain.png")
+
     image dv shy wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_shy_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_shy_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_shy_rain.png")
+
     image dv surprise wet flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_surprise_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/wet/wet_dv_surprise_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/wet/wet_dv_surprise_rain.png")
+
 #АЛИСА ПИОНЕРСКАЯ:
     image dv smile4 pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile6.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile6.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile6.png")
+
     image dv smile5 pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile7.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile7.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_smile7.png")
+
     image dv grin pioneer flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_grin.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_grin.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_grin.png")
+
     image dv surprise2 pioneer close flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_surprise2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_surprise2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/close/pioneer/pioneer_dv_surprise2.png")
+
     image dv surprise pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_surprise_pioneer.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_surprise_pioneer.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/dv_surprise_pioneer.png")
+
     image dv thinking pioneer flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_thinking.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_thinking.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_thinking.png")
+
     image dv thinking2 pioneer close flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_think.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_think.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/close/pioneer/pioneer_dv_think.png")
+
     image dv shy2 pioneer close flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_shy2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/close/pioneer/pioneer_dv_shy2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/close/pioneer/pioneer_dv_shy2.png")
+
     image dv scared1 pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png.png")
+
     image dv guilty pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_pioneer_guilty_flt.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_pioneer_guilty_flt.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/dv_pioneer_guilty_flt.png.png")
+
     image dv sad pioneer flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_pioneer_sad_flt.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_pioneer_sad_flt.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/dv_pioneer_sad_flt.png")
+
     image dv angry pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_angry_pioneer.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/dv_angry_pioneer.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/dv_angry_pioneer.png.png")
+
     image dv scared1 pioneer flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer/pioneer_dv_scared1.png")
+
 #АЛИСА ПИОНЕРСКАЯ С УЗЛОМ:
     image dv heart pioneer2 far flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/pioneer2/pioneer2_dv_heart.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/pioneer2/pioneer2_dv_heart.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/far/pioneer2/pioneer2_dv_heart.png")
+
     image dv sad2 pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_sad2", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_sad2", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_sad2")
+
     image dv guilty pioneer2 flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_guilty.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_guilty.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_guilty.png")
+
     image dv scared pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_scared.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_scared.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_scared.png")
+
     image dv smile2 pioneer2 flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_smile2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_smile2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_smile2.png")
+
     image dv surprise pioneer2 flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise.png")
+
     image dv surprise2 pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_surprise2.png")
+
     image dv shoked pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked.png")
+
     image dv shoked2 pioneer2 flt = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shoked2.png")
+
     image dv shy pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shy.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shy.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_shy.png")
+
     image dv grin pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_grin.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_grin.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_grin.png")
+
     image dv angry pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_angry.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_angry.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_angry.png")
+
     image dv rage pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_rage.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_rage.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/pioneer2_dv_rage.png")
+
     image dv normal pioneer2 flt = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/dv_normal_pioneer2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/normal/pioneer2/dv_normal_pioneer2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/normal/pioneer2/dv_normal_pioneer2.png")
+
 #АРСЕНИЙ:
     image ars_angry = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_angry.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_angry.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_angry.png")
+
     image ars_angry2 = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_angry2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_angry2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_angry2.png")
+
     image ars_normal = ConditionSwitch( 
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_normal.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_normal.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_normal.png")
+
     image ars_normal2  = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_normal2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_normal2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_normal2.png")
+        
     image ars_smile = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_smile.png")
+
     image ars_smile2 = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_smile2.png")
+
     image ars_smile3 = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile3.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile3.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_smile3.png")
+
     image ars_smile4 = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile4.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_smile4.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_smile4.png")
+
     image ars_surprise = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_surprise.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_surprise.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_surprise.png")
+
     image ars_surprise2 = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_surprise2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_surprise2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_surprise2.png")
+
     image ars_think = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_think.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_think.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_think.png")
+
     image ars_think2 = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_think2.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ars/pioneer/ars_think2.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ars/pioneer/ars_think2.png")
+
 #МИКУ МОКРАЯ:
     image mi_grin_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_grin_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_grin_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_grin_wet_rain.png")
+
     image mi_normal_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_normal_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_normal_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_normal_wet_rain.png")
+
     image mi_shy_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_shy_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_shy_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_shy_wet_rain.png")
+
     image mi_smile_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_smile_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_smile_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_smile_wet_rain.png")
+
     image mi_surprise_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_surprise_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_surprise_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_surprise_wet_rain.png")
+
     image mi_upset_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_upset_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_upset_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_upset_wet_rain.png")
+
     image mi_scared_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_scared_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_scared_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_scared_wet_rain.png")
+
     image mi_shocked_wet_rain = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_shocked_wet_rain.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/wet/mi_shocked_wet_rain.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/wet/mi_shocked_wet_rain.png")
+
 #АЛИСА ПИЖАМА:
     image sleep_dv_shy = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "dv/far/sleep/sleep_dv_shy.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "dv/far/sleep/sleep_dv_shy.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "dv/far/sleep/sleep_dv_shy.png")
+
 #УЛЬЯНА СПИНОЙ:
     image spina_us = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "us/spina_us.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "us/spina_us.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "us/spina_us.png")
+
 #МИКУ СПИНА И РУКИ:
     image spina_mi = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/spina_mi.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/spina_mi.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/spina_mi.png")
+
     image miku_ruki = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "mi/miku_ruki.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "mi/miku_ruki.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "mi/miku_ruki.png")
+
 #ПОВАР МАРИЯ:
     image cook_laugh = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "nt/nt_1_cook.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "nt/nt_1_cook.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "nt/nt_1_cook.png")
+
     image cook_smile = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "nt/nt_2_cook.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "nt/nt_2_cook.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "nt/nt_2_cook.png")
+
     image cook_normal = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "nt/nt_3_cook.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "nt/nt_3_cook.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "nt/nt_3_cook.png")
+
     image cook_sad = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "nt/nt_4_cook.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "nt/nt_4_cook.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "nt/nt_4_cook.png")
+
 #ПЕТЯ s1pepega:
     image petr_smile = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ded/petr_smile.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ded/petr_smile.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ded/petr_smile.png")
+
     image petr_grin = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ded/petr_grin.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ded/petr_grin.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ded/petr_grin.png")
+
     image petr_normal = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "ded/petr_normal.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "ded/petr_normal.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "ded/petr_normal.png")
+
 #МАША:
     image msh_laugh_sport = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "msh/msh_laugh_sport.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "msh/msh_laugh_sport.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "msh/msh_laugh_sport.png")
+        
     image msh_smile_sport = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "msh/msh_smile_backhands_sport.png", im.matrix.tint(0.94, 0.82, 1.0)),
         "persistent.sprite_time=='night'",im.MatrixColor( tft_sprite_path + "msh/msh_smile_backhands_sport.png", im.matrix.tint(0.63, 0.78, 0.82)),
         True, tft_sprite_path + "msh/msh_smile_backhands_sport.png")
+        
 #ПРОЧЕЕ:
     image chair = getFile("sprites/misc/chair.png")
     image chair2 = getFile("sprites/misc/chair2.png")
@@ -675,7 +774,7 @@ init 2:
     image day3 = getFile("gui/day3.png")
     image white_screen = getFile("gui/white_screen.png")
     image tft_menu_background = getFile("screens/menu/tft_menu_background.png")
-    image pirat_prewiew = getFile("pirat_prewiew.jpg")
+    image pirat_prewiew = getFile("gui/pirat_prewiew.jpg")
 
     # = ConditionSwitch(
     #    "persistent.sprite_time=='sunset'",im.MatrixColor( tft_sprite_path + "", im.matrix.tint(0.94, 0.82, 1.0)),
