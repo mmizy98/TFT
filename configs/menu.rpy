@@ -13,20 +13,15 @@ label tft_menu_main:
 screen tft_menu:
     tag menu
     imagebutton:
-        xpos 465 ypos 90
+        xpos 460 ypos 140
         auto getFile("gui/menu/tft_start_%s.png")
         hovered Play("sfx_2", sfx_menu_selected)
         action [ Play("sfx_3", sfx_menu_select), Jump ("tft_disclaimer") ]
     imagebutton:
-        xpos 423 ypos 140
+        xpos 417 ypos 190
         auto getFile("gui/menu/tft_load_%s.png")
         hovered Play("sfx_2", sfx_menu_selected)
         action [ Play("sfx_3", sfx_menu_select), ShowMenu('load') ]
-    imagebutton:
-        xpos 417 ypos 190
-        auto getFile("gui/menu/tft_achieves_%s.png")
-        hovered Play("sfx_2", sfx_menu_selected)
-        action [ Play("sfx_3", sfx_menu_select), Jump ("achs") ]
     imagebutton:
         xpos 437 ypos 240
         auto getFile("gui/menu/tft_settings_%s.png")
@@ -52,31 +47,6 @@ label tft_menu_easter_egg:
         $ tft_achievment_5_count = 1
         play sound sfx_achievement
         call screen Get_Achieve_5
-
-#МИНИ МЕНЮ
-screen tft_menu_selector:
-    tag menu
-    add getFile("gui/menu/lil_menu_back.png") xalign 0.5 yalign 0.5
-    imagebutton:
-        xalign 0.5 yalign 0.57
-        auto getFile("gui/menu/lil_menu_set_%s.png")
-        action ShowMenu('preferences')
-    imagebutton:
-        xalign 0.5 yalign 0.50
-        auto getFile("gui/menu/lil_menu_load_%s.png")
-        action ShowMenu('load')
-    imagebutton:
-        xalign 0.5 yalign 0.43
-        auto getFile("gui/menu/lil_menu_save_%s.png")
-        action ShowMenu('save')
-    imagebutton:
-        xalign 0.5 yalign 0.36
-        auto getFile("gui/menu/lil_menu_modmenu_%s.png")
-        action Jump ("tft_menu_main")
-    imagebutton:
-        xalign 0.5 yalign 0.65
-        auto getFile("gui/menu/lil_menu_exit_%s.png")
-        action ShowMenu('quit')
 
 #ДИСКЛЕЙМЕР
 label tft_disclaimer:

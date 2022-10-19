@@ -53,7 +53,7 @@ init 2:
     $ ambience_rain_in_7dl = getFile("sound/ambience/ambience_rain_in_7dl.ogg")
 
 #МУЗЫКА:
-    $ letov_u_okna = getFile("sound/music/letov_u_okna.mp3")
+    $ letov_u_okna = getFile("sound/music/sh_domoi.mp3")
     $ roxette = getFile("sound/music/roxette.mp3")
     $ your_nobility = getFile("sound/music/your_nobility.mp3")
     $ GS_Chasing_a_Rumor = getFile("sound/music/GS_Chasing_a_Rumor.mp3")

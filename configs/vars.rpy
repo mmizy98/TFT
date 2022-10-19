@@ -22,11 +22,6 @@ init -97 python:
     montserrat = getFile("fonts/montserrat_extralight.ttf")
     cinzel_bold = getFile("fonts/cinzel_bold.ttf")
 
-#ИЗМЕНЕНИЕ МЕНЮ-СЕЛЕКТОРА НА КАСТОМНОЕ
-init -1 python:
-    def updVisual():
-        renpy.display.screen.screens[("game_menu_selector",None)] = renpy.display.screen.screens[("tft_menu_selector",None)]
-
 #МУЗЫКАЛЬНЫЕ КАНАЛЫ
 init python:
     renpy.music.register_channel("sfx_2",loop=False)
@@ -35,7 +30,7 @@ init python:
 #ПЕРЕМЕННЫЕ
 init:
     define config.developer = True
-    $ mods["tft_menu_main"]=u"{font=[montserrat]}Судьбы Двух"
+    $ mods["tft_menu_main"]=u"{font=[montserrat]}Пионерия"
     $ day0_drunk =  False
     $ day3_valleyball_nicepunch = False
     $ day4_cig = False
@@ -45,7 +40,7 @@ init:
     $ tft_qte2_count = 0
 
 #ПЕРСОНАЖИ:
-    $ dns = Character (u'Денис', color = "#a7c575", what_color = "E2C778")
+    $ dns = Character (u'Семён', color = "#a7c575", what_color = "E2C778")
     $ ars = Character (u'Арсений', color = "#de6868", what_color = "E2C778")
     $ fan = Character (u'Поклонник', color = "#7e79b5", what_color = "E2C778")
     $ pvr = Character (u'Повар', color = "#4170fd", what_color = "E2C778")

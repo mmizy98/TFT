@@ -126,7 +126,7 @@ label tft_day1:
     pvr "А это ты новенький? {w}Я слышала что к нам приехал один."
     dns "Да, я тут всего пару дней."
     pvr "Ну вот, значит я была права. {w}Меня кстати Марией зовут, но все зовут тётей Машей."
-    dns "Очень приятно, а я Денис."
+    dns "Очень приятно, а я Семён."
     hide cook_normal with dspr
     show cook_smile with dissolve
     "Она положила мне две котлеты и отдала тарелку."
@@ -172,7 +172,7 @@ label tft_day1:
         linear 0.7 xalign 0.5
     pause (1)
     window show
-    us "Привет, ты Денис?"
+    us "Привет, ты Семён?"
     dns "Привет, да. {w}А ты кто?"
     us "А я Ульяна."
     dns "Круто, а меня откуда знаешь?"
@@ -189,7 +189,7 @@ label tft_day1:
     window show
     us "Пойдешь с нами на воллейболл?"
     th "Я здесь уже третий день, а за всё время ещё ни с кем нормально не контактировал."
-    th "Хоть Ульяна и выглядет младше той же Алисы, но думаю стоит попробовать."
+    th "Хоть Ульяна и выглядит младше той же Алисы, но думаю стоит попробовать."
     dns "Да, давай."
     dns "Только с кем с вами? Я тут никого не знаю."
     us "Я, Алиса, Витька и Машка, еще какой-то мальчик... {w=0.7}Ну и ты."
@@ -256,7 +256,7 @@ label tft_day1:
     "Вожатая пила чай сидя за столом."
     dns "Ольга Дмитриевна добрый день!"
     show mt smile panama pioneer with dissolve
-    mt "Привет Денис, да уже вечер почти."
+    mt "Привет Семён, да уже вечер почти."
     mt "Ты просто так или по делу?"
     dns "По делу. {w}У вас случаем нету лишней спортивной формы?"
     mt "А твоя где?"
@@ -691,15 +691,6 @@ label volleyball_end:
     show ars_smile with dissolve
     window show
     jump arseniy_after_vallyball
-    if day3_valleyball_nicepunch:
-        $ tft_achievment_4 = True
-        ars "Круто ты кстати ту мою первую подачу отбил."
-        dns "Да оно случайно вышло, а так спасибо."
-        window hide
-        if tft_achievment_4:
-                $ tft_achievment_4_count = 1
-                play sound sfx_achievement
-                call screen Get_Achieve_4
 label arseniy_after_vallyball:
     hide ars_smile
     show ars_smile3

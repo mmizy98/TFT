@@ -176,7 +176,7 @@ label tft_day2:
     show sl smile2 sport with dissolve
     window show
     "Обернувшись я увидел Славю в спортивной одежде."
-    sl "Денис, доброе утро."
+    sl "Семён, доброе утро."
     dns "Доброе."
     sl "Можно тебя кое о чём попросить?"
     dns "Ну... да."
@@ -228,7 +228,7 @@ label tft_day2:
         linear 2 xpos 0 zpos 0
     pause (2)
     window show
-    th "Так, ну и где же следящий за всем этим марксистским безобразинем?"
+    th "Так, ну и где же следящий за всем этим марксистским безобразием?"
     window hide
     show mz normal glasses pioneer with dissolve
     play music music_list['your_bright_side'] fadein 4
@@ -341,7 +341,7 @@ label tft_day2:
     ars "Ольга Дмитриевна, Ольга Дмитриевна!"
     show mt surprise panama pioneer with dissolve
     mt "Что случилось?"
-    ars "Маша пропала! Мы с Денисом её ищем но никак найти не можем."
+    ars "Маша пропала! Мы с Семёном её ищем но никак найти не можем."
     dns "Нигде её нет."
     "Подключился я."
     "От неожиданности вожатая даже растерялась."
@@ -419,7 +419,7 @@ label tft_day2:
     ded "О! Арсюш, привет!"
     ars "Как поживаешь?"
     ded "Да потихоньку. {w}Давно тебя не видел. Ты с другом пришёл?"
-    ars "Да, Денис зовут."
+    ars "Да, Семён зовут."
     dns "Здравствуйте."
     ded "Здравствуй сынок, меня Пётр звать."
     dns "Очень приятно!"
@@ -700,7 +700,7 @@ label tft_day2:
     window hide
     show mt normal panama pioneer with dissolve
     window show
-    mt "О, Денис, Арсений. {w}А Маша уже нашлась."
+    mt "О, Семён, Арсений. {w}А Маша уже нашлась."
     dns "А где она была?"
     mt "В домике у себя сидела."
     window hide
